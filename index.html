@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A rural retirement property decision-support dashboard for Chris and Becky.">
+  <title>No More Asshole Neighbors</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="No More Asshole Neighbors home">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <span>
+        <strong>No More Asshole Neighbors</strong>
+        <small>Retirement property intelligence</small>
+      </span>
+    </a>
+    <p class="system-status" id="system-status" role="status">
+      <span class="status-light" aria-hidden="true"></span>
+      Loading property database
+    </p>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">The retirement reality check</p>
+        <h1>Could we happily <span>retire here?</span></h1>
+        <p class="hero-copy">
+          Find affordable rural property with room to breathe, utilities already
+          in place, and as few visible neighbors as reasonably possible.
+        </p>
+      </div>
+      <blockquote>
+        Privacy over luxury. Freedom over square footage. Trees are a feature.
+      </blockquote>
+    </section>
+
+    <section class="metrics" aria-label="Project metrics">
+      <article>
+        <span>Properties tracked</span>
+        <strong id="property-count">0</strong>
+      </article>
+      <article>
+        <span>Minimum acreage</span>
+        <strong>2+</strong>
+      </article>
+      <article>
+        <span>Household income target</span>
+        <strong>$3K/mo</strong>
+      </article>
+      <article>
+        <span>Primary search area</span>
+        <strong>West / Central FL</strong>
+      </article>
+    </section>
+
+    <section class="workspace" aria-label="Property evaluation workspace">
+      <aside class="panel">
+        <p class="eyebrow">Candidate queue</p>
+        <h2>No properties loaded yet</h2>
+        <p>The property list and evaluation controls arrive in a later feature.</p>
+      </aside>
+
+      <section class="map-shell" aria-labelledby="map-heading">
+        <div>
+          <p class="eyebrow">Search map</p>
+          <h2 id="map-heading">Leaflet foundation ready</h2>
+          <p>Map initialization and property markers are intentionally deferred.</p>
+        </div>
+        <div id="map" aria-label="Future property map"></div>
+      </section>
+
+      <aside class="panel">
+        <p class="eyebrow">Retirement fit</p>
+        <h2>Evaluation pending</h2>
+        <p>The scoring model will be designed and tested as its own feature.</p>
+      </aside>
+    </section>
+
+    <section class="principles" aria-labelledby="principles-heading">
+      <div>
+        <p class="eyebrow">What matters</p>
+        <h2 id="principles-heading">A home base, not a status symbol.</h2>
+      </div>
+      <ul>
+        <li>Existing power, water, septic, or a dwelling</li>
+        <li>No HOA and room for a workshop</li>
+        <li>Wooded privacy and remote-gate potential</li>
+        <li>Solar-friendly without sacrificing useful shade</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <strong>No More Asshole Neighbors v0.1.0</strong>
+    <span>Built by Chris Farwell · Foundation established July 2026</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
