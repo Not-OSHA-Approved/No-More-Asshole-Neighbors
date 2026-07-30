@@ -2,11 +2,11 @@
 
 ## Current version
 
-`0.1.0`
+`0.2.0`
 
 ## Current milestone
 
-Project foundation.
+Property data contract.
 
 ## Included
 
@@ -17,10 +17,12 @@ Project foundation.
 - JavaScript database health check
 - Automated structural validation
 - README, development workflow, status, changelog, and MIT license
+- JSON Schema Draft 2020-12 property contract
+- Match, exception, and rejection qualification states
+- Documented hard HOA veto
 
 ## Intentionally deferred
 
-- Property JSON schema
 - First property
 - Retirement-fit scoring model
 - Housing-cost affordability model
@@ -31,4 +33,4 @@ Project foundation.
 
 ## Next proposed feature
 
-Design and validate the property JSON schema before adding the first property.
+Design the retirement-fit scoring model without adding property records.

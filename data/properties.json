@@ -1,7 +1,9 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.1.0",
+    "version": "0.2.0",
+    "schemaVersion": "1.0.0",
+    "schema": "property.schema.json",
     "updated": "2026-07-30",
     "description": "Rural retirement property candidates for Chris and Becky"
   },

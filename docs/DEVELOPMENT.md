@@ -45,3 +45,9 @@ It does not include:
 - filters
 - map initialization or markers
 - automated property acquisition
+
+## Property data contract
+
+Beginning with version `0.2.0`, every property record must conform to
+`data/property.schema.json`. See `docs/PROPERTY-SCHEMA.md` for qualification
+rules and the hard HOA veto.

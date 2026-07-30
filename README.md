@@ -33,8 +33,9 @@ This is not a real-estate listing service. It answers one practical question:
 
 ## Current status
 
-Version `0.1.0` establishes the project foundation only. Property rendering,
-scoring, filtering, and map behavior are intentionally deferred.
+Version `0.2.0` adds the formal property schema and qualification rules.
+Property rendering, scoring, filtering, and map behavior remain intentionally
+deferred.
 
 ## Local preview
 
