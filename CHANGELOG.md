@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented here.
 
+## [0.7.1] - 2026-07-31
+
+### Fixed
+
+- Serve Leaflet locally so CDN failures cannot leave the persistent map blank
+- Cache-bust local dashboard assets during GitHub Pages deployments
+
 ## [0.7.0] - 2026-07-31
 
 ### Added

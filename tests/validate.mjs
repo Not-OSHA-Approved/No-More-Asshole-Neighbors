@@ -8,6 +8,9 @@ const requiredFiles = [
   "js/app.js",
   "js/property-view.js",
   "js/scoring.js",
+  "vendor/leaflet/leaflet.js",
+  "vendor/leaflet/leaflet.css",
+  "vendor/leaflet/LICENSE",
   "data/properties.json",
   "data/property.schema.json",
   "README.md",
@@ -38,12 +41,14 @@ const publicSource = [
 ].join("\n");
 
 assert.match(index, /<title>No More Asshole Neighbors<\/title>/);
-assert.match(index, /leaflet@1\.9\.4/);
-assert.match(index, /css\/main\.css/);
-assert.match(index, /js\/app\.js/);
+assert.match(index, /vendor\/leaflet\/leaflet\.css\?v=1\.9\.4/);
+assert.match(index, /vendor\/leaflet\/leaflet\.js\?v=1\.9\.4/);
+assert.match(index, /css\/main\.css\?v=0\.7\.1/);
+assert.match(index, /js\/app\.js\?v=0\.7\.1/);
+assert.doesNotMatch(index, /unpkg\.com/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.7.0");
+assert.equal(database.metadata.version, "0.7.1");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
 assert.equal(database.properties.length, 1);
