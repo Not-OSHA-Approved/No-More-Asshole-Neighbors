@@ -1,10 +1,10 @@
 {
   "name": "no-more-asshole-neighbors",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "type": "module",
   "private": true,
   "description": "A rural retirement property decision-support dashboard.",
   "scripts": {
-    "test": "node tests/validate.mjs && node tests/scoring.test.mjs"
+    "test": "node tests/validate.mjs && node tests/scoring.test.mjs && node tests/property-view.test.mjs"
   }
 }

@@ -57,3 +57,10 @@ rules and the hard HOA veto.
 Beginning with version `0.3.0`, `js/scoring.js` is the authoritative scoring
 engine. Retirement Fit and Acquisition Feasibility remain separate scores and
 must not be averaged. See `docs/SCORING-MODEL.md`.
+
+## Presentation contract
+
+Beginning with version `0.5.0`, `js/property-view.js` converts validated records
+into escaped candidate and detail markup. It calculates scores at render time and
+must keep confirmed facts separate from unknowns and red flags. The interface
+must never make an unverified listing claim look confirmed.

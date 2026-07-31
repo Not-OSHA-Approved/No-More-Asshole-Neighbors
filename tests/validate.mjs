@@ -5,6 +5,7 @@ const requiredFiles = [
   "index.html",
   "css/main.css",
   "js/app.js",
+  "js/property-view.js",
   "js/scoring.js",
   "data/properties.json",
   "data/property.schema.json",
@@ -40,7 +41,7 @@ assert.match(index, /css\/main\.css/);
 assert.match(index, /js\/app\.js/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.4.0");
+assert.equal(database.metadata.version, "0.5.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
 assert.equal(database.properties.length, 1);
@@ -182,7 +183,7 @@ assert.deepEqual(
   ["hoa-cannot-be-exception", "hoa-must-reject"]
 );
 assert.doesNotMatch(publicSource, /JOE VISION|Joe Vision|joe-vision/);
-assert.doesNotMatch(app, /L\.map|L\.marker|score/i);
+assert.doesNotMatch(app, /L\.map|L\.marker/);
 
 console.log(`Validated ${requiredFiles.length} project files.`);
 console.log("Confirmed match, exception, rejection, and hard HOA schema rules.");

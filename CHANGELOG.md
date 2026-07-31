@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented here.
 
+## [0.5.0] - 2026-07-31
+
+### Added
+
+- Database-driven candidate queue and selected-property evaluation
+- Independent Retirement Fit and Acquisition Feasibility score cards
+- Confirmed fact, unknown, red-flag, and research-confidence presentation
+- Direct current-listing and map links
+- Dependency-free rendering and HTML-escaping regression tests
+
+### Changed
+
+- Replaced the placeholder workspace with a responsive decision dashboard
+
 ## [0.4.0] - 2026-07-31
 
 ### Added

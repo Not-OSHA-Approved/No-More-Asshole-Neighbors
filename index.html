@@ -59,25 +59,22 @@
     </section>
 
     <section class="workspace" aria-label="Property evaluation workspace">
-      <aside class="panel">
+      <aside class="panel queue-panel">
         <p class="eyebrow">Candidate queue</p>
-        <h2>No properties loaded yet</h2>
-        <p>The property list and evaluation controls arrive in a later feature.</p>
+        <h2>Properties worth arguing about</h2>
+        <div id="candidate-queue" class="candidate-queue" aria-live="polite">
+          <p>Loading researched candidates…</p>
+        </div>
       </aside>
 
-      <section class="map-shell" aria-labelledby="map-heading">
-        <div>
-          <p class="eyebrow">Search map</p>
-          <h2 id="map-heading">Leaflet foundation ready</h2>
-          <p>Map initialization and property markers are intentionally deferred.</p>
+      <section class="map-shell detail-shell" aria-label="Selected property evaluation">
+        <div id="property-detail" class="property-detail">
+          <p>Loading property evaluation…</p>
         </div>
-        <div id="map" aria-label="Future property map"></div>
       </section>
 
-      <aside class="panel">
-        <p class="eyebrow">Retirement fit</p>
-        <h2>Evaluation pending</h2>
-        <p>The scoring model will be designed and tested as its own feature.</p>
+      <aside class="panel" id="acquisition-panel">
+        <p>Loading acquisition reality check…</p>
       </aside>
     </section>
 
@@ -96,11 +93,11 @@
   </main>
 
   <footer>
-    <strong>No More Asshole Neighbors v0.4.0</strong>
+    <strong>No More Asshole Neighbors v0.5.0</strong>
     <span>Built by Chris Farwell · Foundation established July 2026</span>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/app.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>

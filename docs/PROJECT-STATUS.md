@@ -2,11 +2,11 @@
 
 ## Current version
 
-`0.4.0`
+`0.5.0`
 
 ## Current milestone
 
-First researched property candidate.
+Database-driven candidate dashboard.
 
 ## Included
 
@@ -27,15 +27,18 @@ First researched property candidate.
 - First researched candidate: 8608 Hamster Drive
 - Explicit separation of advertised and verified owner-financing terms
 - Recorded condition, price-history, access, utility, and legal-use unknowns
+- Candidate queue with Match, Maybe, and Rejected states
+- Selected-property detail with independent Retirement Fit and Acquisition scores
+- Visible confirmed facts, unknowns, red flags, and current-source links
+- Responsive one-column mobile presentation
 
 ## Intentionally deferred
 
 - Housing-cost affordability model
-- Queue and detail rendering
 - Leaflet map initialization
 - Search and filters
 - GitHub Pages deployment configuration
 
 ## Next proposed feature
 
-Render the candidate queue from the validated property database.
+Publish the static dashboard through GitHub Pages.
