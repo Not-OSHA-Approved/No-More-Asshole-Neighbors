@@ -33,9 +33,9 @@ This is not a real-estate listing service. It answers one practical question:
 
 ## Current status
 
-Version `0.3.0` adds independent Retirement Fit and Acquisition Feasibility
-scores plus the hard-veto rules that run before scoring. Property rendering,
-real listings, filtering, and map behavior remain intentionally deferred.
+Version `0.4.0` adds the first researched candidate and preserves the difference
+between advertised seller flexibility and verified workable financing. Property
+rendering, filtering, and map behavior remain intentionally deferred.
 
 ## Local preview
 

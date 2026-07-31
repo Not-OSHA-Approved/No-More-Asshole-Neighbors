@@ -40,10 +40,10 @@ assert.match(index, /css\/main\.css/);
 assert.match(index, /js\/app\.js/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.3.0");
+assert.equal(database.metadata.version, "0.4.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
-assert.deepEqual(database.properties, []);
+assert.equal(database.properties.length, 1);
 assert.equal(schema.$schema, "https://json-schema.org/draft/2020-12/schema");
 assert.equal(schema.additionalProperties, false);
 
@@ -160,6 +160,20 @@ representativeHoaRejection.qualification = {
 assert.deepEqual(qualificationViolations(representativeMatch), []);
 assert.deepEqual(qualificationViolations(representativeException), []);
 assert.deepEqual(qualificationViolations(representativeHoaRejection), []);
+
+const firstCandidate = database.properties[0];
+assert.equal(firstCandidate.id, "NMAN-001");
+assert.equal(firstCandidate.name, "8608 Hamster Drive");
+assert.equal(firstCandidate.listing.status, "active");
+assert.equal(firstCandidate.listing.price, 150000);
+assert.equal(firstCandidate.land.acres, 2);
+assert.equal(firstCandidate.restrictions.hoa, "none");
+assert.equal(firstCandidate.acquisition.ownerFinancing, "negotiable");
+assert.equal(firstCandidate.qualification.status, "exception");
+assert.deepEqual(firstCandidate.qualification.missedRequirements, ["affordability"]);
+assert.deepEqual(qualificationViolations(firstCandidate), []);
+assert.ok(firstCandidate.research.unknowns.length >= 10);
+assert.match(firstCandidate.research.notes, /do not confuse advertised owner financing/i);
 
 const invalidHoaException = structuredClone(representativeException);
 invalidHoaException.restrictions.hoa = "present";

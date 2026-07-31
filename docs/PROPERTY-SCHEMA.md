@@ -49,8 +49,15 @@ The schema supports `unknown` and `null` where listing research is incomplete.
 Research confidence and explicit unknowns distinguish missing information from
 verified negative facts.
 
-## Future scoring
+## Research discipline
 
-The schema records facts, qualification decisions, and research confidence. It
-does not assign a retirement-fit score. Scoring remains a separate feature so
-its weights can be designed, explained, and tested independently.
+Listing claims are recorded without silently promoting them to verified facts.
+For example, advertised owner financing may remain `negotiable` until the down
+payment, interest, amortization, balloon, prepayment, and closing terms are
+confirmed. Contradictory MLS fields belong in `research.unknowns`.
+
+## Scoring
+
+The schema records facts, qualification decisions, and research confidence.
+The independent scoring engine consumes these facts without storing calculated
+scores in the database.

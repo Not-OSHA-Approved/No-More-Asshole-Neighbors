@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented here.
 
+## [0.4.0] - 2026-07-31
+
+### Added
+
+- First researched candidate: 8608 Hamster Drive in Zephyrhills, Florida
+- Verified listing facts and explicit unresolved financing, condition, access,
+  privacy, legal-use, and utility questions
+- Validation coverage for the first real property record
+
+### Changed
+
+- Owner financing remains unverified when public remarks conflict with formal
+  MLS financing terms
+
 ## [0.3.0] - 2026-07-31
 
 ### Added

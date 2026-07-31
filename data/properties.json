@@ -1,11 +1,133 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-07-30",
+    "updated": "2026-07-31",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
-  "properties": []
+  "properties": [
+    {
+      "id": "NMAN-001",
+      "name": "8608 Hamster Drive",
+      "nickname": "The Potential Shit-Hole",
+      "location": {
+        "address": "8608 Hamster Drive",
+        "city": "Zephyrhills",
+        "state": "FL",
+        "county": "Pasco",
+        "latitude": 28.2132,
+        "longitude": -82.1439,
+        "setting": "semi-rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 150000,
+        "previousPrice": 167900,
+        "dateAdded": "2026-07-31",
+        "dateChecked": "2026-07-31"
+      },
+      "land": {
+        "acres": 2,
+        "wooded": "unknown",
+        "roadAccess": "uncertain",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "adequate",
+        "floodRisk": "low",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "major-rehab"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "available",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "AR"
+      },
+      "affordability": {
+        "fit": "unknown",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "Owner-financing terms, insurance eligibility, taxes after sale, and repair costs are not yet known."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "unknown",
+        "workshopPotential": "possible",
+        "solarPotential": "unknown",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "possible",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "negotiable",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": ["affordability"],
+        "exceptionReason": "The total monthly cost and seller-financing terms are unknown, but the property combines two acres, an existing dwelling and utilities, no HOA, and advertised owner financing.",
+        "exceptionalStrengths": [
+          "Owner financing is advertised",
+          "Existing well, septic, electrical availability, and residential dwelling",
+          "Two acres with no HOA or lot rent"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 62,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active MLS listing TB8519212 at $150,000 on 2026-07-31",
+          "Two-acre fee-simple parcel zoned AR",
+          "No HOA or lot rent advertised",
+          "1977 double-wide is explicitly listed as a fixer with no heating, cooling, or appliances",
+          "Well, septic tank, and electricity availability are listed",
+          "Flood Zone X is listed",
+          "Owner financing is advertised in public remarks"
+        ],
+        "unknowns": [
+          "Owner-financing down payment, interest rate, amortization, balloon, and prepayment terms",
+          "Why formal MLS terms list only cash and conventional financing",
+          "Condition and current operation of the well, septic, and electrical service",
+          "Condition, title status, and insurability of the mobile home",
+          "Reason for the reported $20,000 sale on 2026-05-26 and immediate resale markup",
+          "Visible neighbors and practical screening",
+          "Legal and physical access over the recorded ingress and egress easement",
+          "Year-round access and turning room for a 40-foot, 26,000-pound RV",
+          "Deed restrictions, outdoor-storage rules, and full-time RV rules",
+          "Wetlands, evacuation route, water access, and internet service"
+        ],
+        "notes": "High-potential but poor-condition lead. Keep only if seller terms and parcel verification survive direct inquiry; do not confuse advertised owner financing with verified workable financing."
+      },
+      "links": {
+        "listing": "https://www.realtor.com/realestateandhomes-detail/8608-Hamster-Dr_Zephyrhills_FL_33540_M69619-35862",
+        "map": "https://www.openstreetmap.org/search?query=8608%20Hamster%20Drive%2C%20Zephyrhills%2C%20FL%2033540",
+        "countyGis": null
+      }
+    }
+  ]
 }

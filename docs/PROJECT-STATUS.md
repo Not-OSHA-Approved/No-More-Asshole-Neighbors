@@ -2,11 +2,11 @@
 
 ## Current version
 
-`0.3.0`
+`0.4.0`
 
 ## Current milestone
 
-Retirement-fit and acquisition-feasibility scoring.
+First researched property candidate.
 
 ## Included
 
@@ -24,10 +24,12 @@ Retirement-fit and acquisition-feasibility scoring.
 - Independent 100-point Acquisition Feasibility score
 - Hard vetoes for access, affordability, title, legal occupancy, and evacuation
 - Automated scoring regression tests
+- First researched candidate: 8608 Hamster Drive
+- Explicit separation of advertised and verified owner-financing terms
+- Recorded condition, price-history, access, utility, and legal-use unknowns
 
 ## Intentionally deferred
 
-- First property
 - Housing-cost affordability model
 - Queue and detail rendering
 - Leaflet map initialization
@@ -36,4 +38,4 @@ Retirement-fit and acquisition-feasibility scoring.
 
 ## Next proposed feature
 
-Add and validate the first researched property record without building UI rendering.
+Render the candidate queue from the validated property database.
