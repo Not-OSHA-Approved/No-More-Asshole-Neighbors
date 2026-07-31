@@ -33,9 +33,16 @@ This is not a real-estate listing service. It answers one practical question:
 
 ## Current status
 
-Version `0.5.0` renders researched candidates directly from the JSON database,
+Version `0.6.0` renders researched candidates directly from the JSON database,
 including independent scores, confirmed facts, unknowns, red flags, and direct
-listing links. Filtering and map behavior remain intentionally deferred.
+listing links, and publishes the dashboard through GitHub Pages. Filtering and
+map behavior remain intentionally deferred.
+
+## Live dashboard
+
+The project publishes from `main` at:
+
+https://not-osha-approved.github.io/No-More-Asshole-Neighbors/
 
 ## Local preview
 

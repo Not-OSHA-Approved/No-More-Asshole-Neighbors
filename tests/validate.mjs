@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const requiredFiles = [
+  ".github/workflows/pages.yml",
   "index.html",
   "css/main.css",
   "js/app.js",
@@ -26,6 +27,7 @@ for (const path of requiredFiles) {
 
 const index = contents.get("index.html");
 const app = contents.get("js/app.js");
+const pagesWorkflow = contents.get(".github/workflows/pages.yml");
 const database = JSON.parse(contents.get("data/properties.json"));
 const schema = JSON.parse(contents.get("data/property.schema.json"));
 const publicSource = [
@@ -41,12 +43,18 @@ assert.match(index, /css\/main\.css/);
 assert.match(index, /js\/app\.js/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.5.0");
+assert.equal(database.metadata.version, "0.6.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
 assert.equal(database.properties.length, 1);
 assert.equal(schema.$schema, "https://json-schema.org/draft/2020-12/schema");
 assert.equal(schema.additionalProperties, false);
+assert.match(pagesWorkflow, /branches: \[main\]/);
+assert.match(pagesWorkflow, /pages: write/);
+assert.match(pagesWorkflow, /id-token: write/);
+assert.match(pagesWorkflow, /actions\/configure-pages@v5/);
+assert.match(pagesWorkflow, /enablement: true/);
+assert.match(pagesWorkflow, /actions\/deploy-pages@v4/);
 
 const hoaRule = schema.allOf.find(rule =>
   rule.if?.properties?.restrictions?.properties?.hoa?.const === "present"

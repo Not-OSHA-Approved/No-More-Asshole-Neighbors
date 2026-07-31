@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented here.
 
+## [0.6.0] - 2026-07-31
+
+### Added
+
+- Automated GitHub Pages deployment from the `main` branch
+- Workflow validation for required Pages permissions and official actions
+- Published dashboard URL documentation
+
 ## [0.5.0] - 2026-07-31
 
 ### Added

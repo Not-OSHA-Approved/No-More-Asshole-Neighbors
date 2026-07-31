@@ -2,11 +2,11 @@
 
 ## Current version
 
-`0.5.0`
+`0.6.0`
 
 ## Current milestone
 
-Database-driven candidate dashboard.
+Published candidate dashboard.
 
 ## Included
 
@@ -31,6 +31,7 @@ Database-driven candidate dashboard.
 - Selected-property detail with independent Retirement Fit and Acquisition scores
 - Visible confirmed facts, unknowns, red flags, and current-source links
 - Responsive one-column mobile presentation
+- Automated GitHub Pages deployment from `main`
 
 ## Intentionally deferred
 
@@ -41,4 +42,4 @@ Database-driven candidate dashboard.
 
 ## Next proposed feature
 
-Publish the static dashboard through GitHub Pages.
+Initialize the Leaflet map and plot validated candidate coordinates.

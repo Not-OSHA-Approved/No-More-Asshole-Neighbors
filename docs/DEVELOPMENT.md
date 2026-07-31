@@ -64,3 +64,10 @@ Beginning with version `0.5.0`, `js/property-view.js` converts validated records
 into escaped candidate and detail markup. It calculates scores at render time and
 must keep confirmed facts separate from unknowns and red flags. The interface
 must never make an unverified listing claim look confirmed.
+
+## Deployment contract
+
+Beginning with version `0.6.0`, `.github/workflows/pages.yml` publishes the
+static repository through GitHub Pages after changes reach `main`. Deployment
+uses GitHub's official Pages actions and grants only repository-read, Pages-write,
+and identity-token permissions.
