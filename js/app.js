@@ -7,6 +7,10 @@ import {
 } from "./property-view.js";
 
 const PROPERTY_DATA_URL = "data/properties.json";
+const DEFAULT_MAP_CENTER = [28.3, -82.2];
+
+let propertyMap;
+let propertyMarker;
 
 async function loadProjectFoundation() {
   const status = document.getElementById("system-status");
@@ -55,6 +59,7 @@ function renderCandidates(properties) {
       .join("");
     detail.innerHTML = renderPropertyDetail(property);
     acquisition.innerHTML = renderAcquisitionPanel(property);
+    showPropertyOnMap(property);
 
     queue.querySelectorAll("[data-property-id]").forEach(button => {
       button.addEventListener("click", () => selectProperty(button.dataset.propertyId));
@@ -62,6 +67,43 @@ function renderCandidates(properties) {
   };
 
   selectProperty(properties[0].id);
+}
+
+function showPropertyOnMap(property) {
+  const { latitude, longitude, coordinateAccuracy } = property.location;
+  const accuracy = document.getElementById("map-accuracy");
+
+  if (!propertyMap) {
+    propertyMap = L.map("map", { zoomControl: true }).setView(DEFAULT_MAP_CENTER, 8);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(propertyMap);
+  }
+
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+    accuracy.textContent = "Coordinates unknown";
+    if (propertyMarker) {
+      propertyMarker.remove();
+      propertyMarker = undefined;
+    }
+    propertyMap.setView(DEFAULT_MAP_CENTER, 8);
+    return;
+  }
+
+  const location = [latitude, longitude];
+  const popup = document.createElement("strong");
+  popup.textContent = property.name;
+
+  if (!propertyMarker) {
+    propertyMarker = L.marker(location).addTo(propertyMap);
+  } else {
+    propertyMarker.setLatLng(location);
+  }
+
+  propertyMarker.bindPopup(popup).openPopup();
+  propertyMap.setView(location, coordinateAccuracy === "exact" ? 16 : 14);
+  accuracy.textContent = `${coordinateAccuracy ?? "Unknown"} coordinates`;
+  window.setTimeout(() => propertyMap.invalidateSize(), 0);
 }
 
 loadProjectFoundation();

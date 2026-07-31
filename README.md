@@ -33,10 +33,10 @@ This is not a real-estate listing service. It answers one practical question:
 
 ## Current status
 
-Version `0.6.0` renders researched candidates directly from the JSON database,
-including independent scores, confirmed facts, unknowns, red flags, and direct
-listing links, and publishes the dashboard through GitHub Pages. Filtering and
-map behavior remain intentionally deferred.
+Version `0.7.0` renders researched candidates directly from the JSON database,
+including independent scores, confirmed facts, unknowns, red flags, direct
+listing links, and a persistent Leaflet map. Filtering remains intentionally
+deferred.
 
 ## Live dashboard
 

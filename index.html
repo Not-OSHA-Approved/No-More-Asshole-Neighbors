@@ -73,9 +73,22 @@
         </div>
       </section>
 
-      <aside class="panel" id="acquisition-panel">
-        <p>Loading acquisition reality check…</p>
-      </aside>
+      <div class="side-rail">
+        <aside class="panel map-panel" aria-labelledby="map-heading">
+          <div class="map-heading">
+            <div>
+              <p class="eyebrow">Location check</p>
+              <h2 id="map-heading">Selected property</h2>
+            </div>
+            <span id="map-accuracy">Loading…</span>
+          </div>
+          <div id="map" role="region" aria-label="Map of selected property"></div>
+        </aside>
+
+        <aside class="panel" id="acquisition-panel">
+          <p>Loading acquisition reality check…</p>
+        </aside>
+      </div>
     </section>
 
     <section class="principles" aria-labelledby="principles-heading">
@@ -93,7 +106,7 @@
   </main>
 
   <footer>
-    <strong>No More Asshole Neighbors v0.6.0</strong>
+    <strong>No More Asshole Neighbors v0.7.0</strong>
     <span>Built by Chris Farwell · Foundation established July 2026</span>
   </footer>
 

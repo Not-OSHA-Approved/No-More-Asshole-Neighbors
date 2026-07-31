@@ -2,17 +2,18 @@
 
 ## Current version
 
-`0.6.0`
+`0.7.0`
 
 ## Current milestone
 
-Published candidate dashboard.
+Published candidate dashboard with persistent property map.
 
 ## Included
 
 - Static GitHub Pages-compatible structure
 - Responsive visual identity distinct from Joe Vision
-- Leaflet loaded and reserved for a later map feature
+- Leaflet map remains visible while reviewing a selected property on desktop
+- Candidate selection automatically updates the map marker and viewport
 - Empty, versioned JSON property database
 - JavaScript database health check
 - Automated structural validation
@@ -36,10 +37,8 @@ Published candidate dashboard.
 ## Intentionally deferred
 
 - Housing-cost affordability model
-- Leaflet map initialization
 - Search and filters
-- GitHub Pages deployment configuration
 
 ## Next proposed feature
 
-Initialize the Leaflet map and plot validated candidate coordinates.
+Add candidate search and filtering without obscuring the persistent map.

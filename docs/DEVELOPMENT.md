@@ -52,6 +52,14 @@ Beginning with version `0.2.0`, every property record must conform to
 `data/property.schema.json`. See `docs/PROPERTY-SCHEMA.md` for qualification
 rules and the hard HOA veto.
 
+## Map contract
+
+Beginning with version `0.7.0`, the selected candidate is plotted on a
+persistent Leaflet map. Candidate changes must recenter the existing map and
+marker rather than create another map instance. Approximate coordinates must be
+labeled as approximate, and missing coordinates must fall back safely to the
+regional search view.
+
 ## Scoring contract
 
 Beginning with version `0.3.0`, `js/scoring.js` is the authoritative scoring

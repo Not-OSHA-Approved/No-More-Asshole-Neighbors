@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented here.
 
+## [0.7.0] - 2026-07-31
+
+### Added
+
+- Persistent Leaflet map for the selected property
+- Automatic map recentering and marker updates when candidate selection changes
+- Coordinate-accuracy label and safe fallback for missing coordinates
+
+### Changed
+
+- Map remains pinned beside the evaluation on desktop and prominent in the mobile flow
+
 ## [0.6.0] - 2026-07-31
 
 ### Added

@@ -43,7 +43,7 @@ assert.match(index, /css\/main\.css/);
 assert.match(index, /js\/app\.js/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.6.0");
+assert.equal(database.metadata.version, "0.7.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
 assert.equal(database.properties.length, 1);
@@ -191,7 +191,11 @@ assert.deepEqual(
   ["hoa-cannot-be-exception", "hoa-must-reject"]
 );
 assert.doesNotMatch(publicSource, /JOE VISION|Joe Vision|joe-vision/);
-assert.doesNotMatch(app, /L\.map|L\.marker/);
+assert.match(index, /id="map"/);
+assert.match(app, /L\.map\("map"/);
+assert.match(app, /L\.marker\(location\)/);
+assert.match(app, /openstreetmap\.org/);
+assert.match(contents.get("css/main.css"), /\.map-panel[\s\S]*position: sticky/);
 
 console.log(`Validated ${requiredFiles.length} project files.`);
 console.log("Confirmed match, exception, rejection, and hard HOA schema rules.");
