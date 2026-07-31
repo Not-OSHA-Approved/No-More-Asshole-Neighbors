@@ -51,3 +51,9 @@ It does not include:
 Beginning with version `0.2.0`, every property record must conform to
 `data/property.schema.json`. See `docs/PROPERTY-SCHEMA.md` for qualification
 rules and the hard HOA veto.
+
+## Scoring contract
+
+Beginning with version `0.3.0`, `js/scoring.js` is the authoritative scoring
+engine. Retirement Fit and Acquisition Feasibility remain separate scores and
+must not be averaged. See `docs/SCORING-MODEL.md`.

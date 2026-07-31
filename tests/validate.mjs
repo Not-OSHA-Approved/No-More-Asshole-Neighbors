@@ -5,6 +5,7 @@ const requiredFiles = [
   "index.html",
   "css/main.css",
   "js/app.js",
+  "js/scoring.js",
   "data/properties.json",
   "data/property.schema.json",
   "README.md",
@@ -12,6 +13,7 @@ const requiredFiles = [
   "LICENSE",
   "docs/DEVELOPMENT.md",
   "docs/PROPERTY-SCHEMA.md",
+  "docs/SCORING-MODEL.md",
   "docs/PROJECT-STATUS.md"
 ];
 
@@ -38,8 +40,8 @@ assert.match(index, /css\/main\.css/);
 assert.match(index, /js\/app\.js/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.2.0");
-assert.equal(database.metadata.schemaVersion, "1.0.0");
+assert.equal(database.metadata.version, "0.3.0");
+assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
 assert.deepEqual(database.properties, []);
 assert.equal(schema.$schema, "https://json-schema.org/draft/2020-12/schema");

@@ -33,9 +33,9 @@ This is not a real-estate listing service. It answers one practical question:
 
 ## Current status
 
-Version `0.2.0` adds the formal property schema and qualification rules.
-Property rendering, scoring, filtering, and map behavior remain intentionally
-deferred.
+Version `0.3.0` adds independent Retirement Fit and Acquisition Feasibility
+scores plus the hard-veto rules that run before scoring. Property rendering,
+real listings, filtering, and map behavior remain intentionally deferred.
 
 ## Local preview
 

@@ -2,11 +2,11 @@
 
 ## Current version
 
-`0.2.0`
+`0.3.0`
 
 ## Current milestone
 
-Property data contract.
+Retirement-fit and acquisition-feasibility scoring.
 
 ## Included
 
@@ -20,11 +20,14 @@ Property data contract.
 - JSON Schema Draft 2020-12 property contract
 - Match, exception, and rejection qualification states
 - Documented hard HOA veto
+- Independent 100-point Retirement Fit score
+- Independent 100-point Acquisition Feasibility score
+- Hard vetoes for access, affordability, title, legal occupancy, and evacuation
+- Automated scoring regression tests
 
 ## Intentionally deferred
 
 - First property
-- Retirement-fit scoring model
 - Housing-cost affordability model
 - Queue and detail rendering
 - Leaflet map initialization
@@ -33,4 +36,4 @@ Property data contract.
 
 ## Next proposed feature
 
-Design the retirement-fit scoring model without adding property records.
+Add and validate the first researched property record without building UI rendering.

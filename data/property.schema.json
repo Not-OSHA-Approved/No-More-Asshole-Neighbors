@@ -4,7 +4,7 @@
   "title": "No More Asshole Neighbors Property",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "location", "listing", "land", "dwelling", "utilities", "restrictions", "affordability", "lifestyle", "qualification", "research", "links"],
+  "required": ["id", "name", "location", "listing", "land", "dwelling", "utilities", "restrictions", "affordability", "legalUse", "lifestyle", "acquisition", "qualification", "research", "links"],
   "properties": {
     "id": { "type": "string", "pattern": "^NMAN-[0-9]{3,}$" },
     "name": { "type": "string", "minLength": 1 },
@@ -12,7 +12,7 @@
     "location": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["address", "city", "state", "county", "latitude", "longitude", "setting", "coordinateAccuracy"],
+      "required": ["address", "city", "state", "county", "latitude", "longitude", "setting", "region", "coordinateAccuracy"],
       "properties": {
         "address": { "type": "string" },
         "city": { "type": "string", "minLength": 1 },
@@ -21,6 +21,7 @@
         "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
         "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
         "setting": { "enum": ["rural", "semi-rural", "suburban", "urban", "unknown"] },
+        "region": { "enum": ["west-coast-florida", "other-florida", "snow-country", "other", "unknown"] },
         "coordinateAccuracy": { "enum": ["parcel", "address", "approximate", "unknown"] }
       }
     },
@@ -39,11 +40,14 @@
     "land": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["acres", "wooded", "roadAccess", "floodRisk"],
+      "required": ["acres", "wooded", "roadAccess", "rvAccess", "evacuationAccess", "usableSpace", "floodRisk"],
       "properties": {
         "acres": { "type": ["number", "null"], "exclusiveMinimum": 0 },
         "wooded": { "enum": ["heavily", "partially", "cleared", "unknown"] },
         "roadAccess": { "enum": ["legal-paved", "legal-unpaved", "uncertain", "landlocked", "unknown"] },
+        "rvAccess": { "enum": ["verified-year-round", "likely", "difficult", "impossible", "unknown"] },
+        "evacuationAccess": { "enum": ["verified", "likely", "blocked", "unknown"] },
+        "usableSpace": { "enum": ["excellent", "adequate", "limited", "poor", "unknown"] },
         "floodRisk": { "enum": ["low", "mixed", "high", "unknown"] },
         "wetlands": { "enum": ["none-known", "partial", "substantial", "unknown"] }
       }
@@ -72,10 +76,11 @@
     "restrictions": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["hoa", "deedRestrictions", "zoning"],
+      "required": ["hoa", "deedRestrictions", "outdoorStorage", "zoning"],
       "properties": {
         "hoa": { "enum": ["none", "present", "unknown"] },
         "deedRestrictions": { "enum": ["none-known", "present", "unknown"] },
+        "outdoorStorage": { "enum": ["unrestricted", "limited", "prohibited", "unknown"] },
         "zoning": { "type": "string", "minLength": 1 }
       }
     },
@@ -90,16 +95,41 @@
         "notes": { "type": "string" }
       }
     },
+    "legalUse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["residentialPath", "fullTimeRvOccupancy"],
+      "properties": {
+        "residentialPath": { "enum": ["existing-dwelling", "rv-allowed", "permit-path", "none", "unknown"] },
+        "fullTimeRvOccupancy": { "enum": ["allowed", "conditional", "prohibited", "unknown"] }
+      }
+    },
     "lifestyle": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["visibleNeighbors", "driveway", "gatePotential", "workshopPotential", "solarPotential"],
+      "required": ["visibleNeighbors", "driveway", "gatePotential", "workshopPotential", "solarPotential", "waterAccessMiles", "internet"],
       "properties": {
         "visibleNeighbors": { "enum": ["none", "few", "several", "many", "unknown"] },
         "driveway": { "enum": ["long", "moderate", "short", "none", "unknown"] },
         "gatePotential": { "enum": ["excellent", "possible", "poor", "unknown"] },
         "workshopPotential": { "enum": ["existing", "excellent", "possible", "poor", "unknown"] },
-        "solarPotential": { "enum": ["excellent", "good", "limited", "poor", "unknown"] }
+        "solarPotential": { "enum": ["excellent", "good", "limited", "poor", "unknown"] },
+        "waterAccessMiles": { "type": ["number", "null"], "minimum": 0 },
+        "internet": { "enum": ["fiber", "cable", "5g", "starlink", "dsl", "none", "unknown"] }
+      }
+    },
+    "acquisition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overlapSolution", "upfrontCashRequired", "ownerFinancing", "monthlyPayment", "balloonYears", "prepaymentPenalty", "closingFlexibility"],
+      "properties": {
+        "overlapSolution": { "enum": ["verified", "possible", "none", "unknown"] },
+        "upfrontCashRequired": { "type": ["number", "null"], "minimum": 0 },
+        "ownerFinancing": { "enum": ["available", "negotiable", "unavailable", "unknown"] },
+        "monthlyPayment": { "type": ["number", "null"], "minimum": 0 },
+        "balloonYears": { "type": ["number", "null"], "minimum": 0 },
+        "prepaymentPenalty": { "enum": ["none", "present", "unknown"] },
+        "closingFlexibility": { "enum": ["high", "some", "none", "unknown"] }
       }
     },
     "qualification": {
@@ -129,10 +159,11 @@
     "research": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["stage", "confidence", "confirmed", "unknowns", "notes"],
+      "required": ["stage", "confidence", "titleStatus", "confirmed", "unknowns", "notes"],
       "properties": {
         "stage": { "enum": ["discovered", "screened", "researching", "verified", "visited"] },
         "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "titleStatus": { "enum": ["clear", "concerns", "serious-problem", "unknown"] },
         "confirmed": { "type": "array", "items": { "type": "string", "minLength": 1 } },
         "unknowns": { "type": "array", "items": { "type": "string", "minLength": 1 } },
         "notes": { "type": "string" }
