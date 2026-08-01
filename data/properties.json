@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.7.1",
+    "version": "0.8.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-07-31",
+    "updated": "2026-08-01",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -126,6 +126,250 @@
       "links": {
         "listing": "https://www.realtor.com/realestateandhomes-detail/8608-Hamster-Dr_Zephyrhills_FL_33540_M69619-35862",
         "map": "https://www.openstreetmap.org/search?query=8608%20Hamster%20Drive%2C%20Zephyrhills%2C%20FL%2033540",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-002",
+      "name": "225 NE 544th Street",
+      "nickname": "The Powered Pole-Barn Project",
+      "location": {
+        "address": "225 NE 544th Street",
+        "city": "Old Town",
+        "state": "FL",
+        "county": "Dixie",
+        "latitude": 29.637,
+        "longitude": -82.999,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 125000,
+        "previousPrice": null,
+        "dateAdded": "2026-08-01",
+        "dateChecked": "2026-08-01"
+      },
+      "land": {
+        "acres": 2.88,
+        "wooded": "partially",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "adequate",
+        "floodRisk": "unknown",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "major-rehab"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "unknown",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "Residential"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": 788,
+        "calculationStatus": "estimated",
+        "notes": "The advertised estimate assumes 20 percent down and excludes renovation risk; the stripped home may not qualify for conventional or USDA financing."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "existing",
+        "solarPotential": "unknown",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "none",
+        "upfrontCashRequired": 30000,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": 788,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": ["no-hoa", "affordability"],
+        "exceptionReason": "The estimated payment is under the target only with roughly $30,000 cash to close, and HOA or deed restrictions remain unverified; the powered pole barn, existing utilities, 2.88 acres, and project-house condition make it worth investigating.",
+        "exceptionalStrengths": [
+          "Large powered pole barn or workshop plus a shed",
+          "Existing well, septic, power, and residential dwelling",
+          "2.88 partially wooded and fenced acres at $125,000"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 72,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active MLS listing 796250 at $125,000 checked on 2026-08-01",
+          "2.88-acre rectangular parcel with grass, native vegetation, trees, and fencing",
+          "2000 single-wide has been stripped and is being remodeled",
+          "Well and septic tank are listed",
+          "Large pole barn or workshop has power in place and a separate shed is listed",
+          "Paved county-road approach with a dirt driveway",
+          "Annual property tax is listed as $545",
+          "Realtor estimate is $788 per month with 20 percent down"
+        ],
+        "unknowns": [
+          "Whether an HOA, mandatory association, or enforceable Indian Oaks deed restrictions exist",
+          "Whether the stripped dwelling is currently insurable or financeable",
+          "Whether power, well, and septic are operating and immediately connectable to the RV",
+          "Actual seller financing, lease-purchase, sale contingency, or delayed-closing flexibility; none is advertised",
+          "Visible neighbors and practical screening from the homesite",
+          "Driveway width, overhead clearance, bearing capacity, and turning room for a 40-foot, 26,000-pound RV",
+          "Legal full-time RV occupancy and outdoor storage rules",
+          "Flood zone, wetlands, and evacuation access",
+          "Water-access distance and internet service",
+          "Renovation scope, permits, title status, and cash required beyond the purchase"
+        ],
+        "notes": "Strong project-property lead, but the payment only works on paper with a down payment Chris and Becky do not currently have. Keep it only if the utilities operate, restrictions are tolerable, and the seller offers a workable acquisition path."
+      },
+      "links": {
+        "listing": "https://www.realtor.com/realestateandhomes-detail/225-NE-544th-St_Old-Town_FL_32680_M52014-22762",
+        "map": "https://www.openstreetmap.org/search?query=225%20NE%20544th%20Street%2C%20Old%20Town%2C%20FL%2032680",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-003",
+      "name": "1668 NE 592nd Street",
+      "nickname": "The Less Scary Old Town Option",
+      "location": {
+        "address": "1668 NE 592nd Street",
+        "city": "Old Town",
+        "state": "FL",
+        "county": "Dixie",
+        "latitude": 29.626642,
+        "longitude": -83.015727,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "address"
+      },
+      "listing": {
+        "status": "active",
+        "price": 159000,
+        "previousPrice": 194000,
+        "dateAdded": "2026-08-01",
+        "dateChecked": "2026-08-01"
+      },
+      "land": {
+        "acres": 2,
+        "wooded": "unknown",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "adequate",
+        "floodRisk": "low",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "move-in"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "RES"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": 873,
+        "calculationStatus": "estimated",
+        "notes": "A broker estimate is near the $900 target, but online calculators conflict and the down payment, insurance, taxes, and actual loan terms are unverified."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "possible",
+        "solarPotential": "unknown",
+        "waterAccessMiles": 5,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "none",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": 873,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": ["affordability"],
+        "exceptionReason": "The estimated payment is near the target but real loan terms and cash to close are unverified, with no seller flexibility advertised; two acres, no HOA, a renovated dwelling, and newly replaced core utility components justify keeping it in the Maybe group.",
+        "exceptionalStrengths": [
+          "New well, septic, metal roof, windows, water heater, and appliances",
+          "Two acres with no HOA on a paved road",
+          "Move-in dwelling within five miles of the Suwannee River"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 78,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active listing at $159,000 checked on 2026-08-01 after reductions from $194,000",
+          "Two-acre parcel measuring approximately 205 by 410 feet",
+          "Updated 1983 double-wide with central heat and air",
+          "New well, septic, metal roof, exterior windows, water heater, and appliances are advertised",
+          "No homeowners association is listed",
+          "Paved-road access and parking for three or more vehicles are listed",
+          "Property is advertised as high and dry",
+          "Less than five miles to the Suwannee River and under 30 miles to the Gulf",
+          "Broker estimate is approximately $873 per month"
+        ],
+        "unknowns": [
+          "Actual cash to close, interest rate, insurance, taxes, and total monthly housing cost",
+          "Seller financing, lease-purchase, sale contingency, or delayed-closing flexibility; none is advertised",
+          "Actual tree cover, visible neighbors, and practical screening",
+          "Driveway width, overhead clearance, bearing capacity, and turning room for a 40-foot, 26,000-pound RV",
+          "Immediate RV connection configuration and legal full-time RV occupancy",
+          "Insurance eligibility of the 1983 manufactured home",
+          "Deed restrictions and outdoor storage rules",
+          "Flood-zone documentation, wetlands, and evacuation access",
+          "Internet service and workshop or shed placement"
+        ],
+        "notes": "The cleaner Becky-facing option. It appears substantially more ready than the project properties, but it does nothing yet to solve the no-overlap purchase problem and must not be treated as affordable until real financing and insurance numbers are obtained."
+      },
+      "links": {
+        "listing": "https://www.zillow.com/homedetails/1668-NE-592nd-St-Old-Town-FL-32680/460948710_zpid/",
+        "map": "https://www.openstreetmap.org/search?query=1668%20NE%20592nd%20Street%2C%20Old%20Town%2C%20FL%2032680",
         "countyGis": null
       }
     }

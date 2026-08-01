@@ -43,15 +43,15 @@ const publicSource = [
 assert.match(index, /<title>No More Asshole Neighbors<\/title>/);
 assert.match(index, /vendor\/leaflet\/leaflet\.css\?v=1\.9\.4/);
 assert.match(index, /vendor\/leaflet\/leaflet\.js\?v=1\.9\.4/);
-assert.match(index, /css\/main\.css\?v=0\.7\.1/);
-assert.match(index, /js\/app\.js\?v=0\.7\.1/);
+assert.match(index, /css\/main\.css\?v=0\.8\.0/);
+assert.match(index, /js\/app\.js\?v=0\.8\.0/);
 assert.doesNotMatch(index, /unpkg\.com/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.7.1");
+assert.equal(database.metadata.version, "0.8.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
-assert.equal(database.properties.length, 1);
+assert.equal(database.properties.length, 3);
 assert.equal(schema.$schema, "https://json-schema.org/draft/2020-12/schema");
 assert.equal(schema.additionalProperties, false);
 assert.match(pagesWorkflow, /branches: \[main\]/);
@@ -188,6 +188,28 @@ assert.deepEqual(firstCandidate.qualification.missedRequirements, ["affordabilit
 assert.deepEqual(qualificationViolations(firstCandidate), []);
 assert.ok(firstCandidate.research.unknowns.length >= 10);
 assert.match(firstCandidate.research.notes, /do not confuse advertised owner financing/i);
+
+const poleBarnCandidate = database.properties[1];
+assert.equal(poleBarnCandidate.id, "NMAN-002");
+assert.equal(poleBarnCandidate.listing.status, "active");
+assert.equal(poleBarnCandidate.listing.price, 125000);
+assert.equal(poleBarnCandidate.land.acres, 2.88);
+assert.equal(poleBarnCandidate.utilities.overall, "existing");
+assert.equal(poleBarnCandidate.lifestyle.workshopPotential, "existing");
+assert.equal(poleBarnCandidate.qualification.status, "exception");
+assert.deepEqual(qualificationViolations(poleBarnCandidate), []);
+assert.match(poleBarnCandidate.research.notes, /no-overlap purchase problem|down payment/i);
+
+const updatedOldTownCandidate = database.properties[2];
+assert.equal(updatedOldTownCandidate.id, "NMAN-003");
+assert.equal(updatedOldTownCandidate.listing.status, "active");
+assert.equal(updatedOldTownCandidate.listing.price, 159000);
+assert.equal(updatedOldTownCandidate.land.acres, 2);
+assert.equal(updatedOldTownCandidate.restrictions.hoa, "none");
+assert.equal(updatedOldTownCandidate.dwelling.condition, "move-in");
+assert.equal(updatedOldTownCandidate.qualification.status, "exception");
+assert.deepEqual(qualificationViolations(updatedOldTownCandidate), []);
+assert.match(updatedOldTownCandidate.research.notes, /Becky-facing option/i);
 
 const invalidHoaException = structuredClone(representativeException);
 invalidHoaException.restrictions.hoa = "present";

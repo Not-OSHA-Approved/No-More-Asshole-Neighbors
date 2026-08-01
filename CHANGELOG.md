@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented here.
 
+## [0.8.0] - 2026-08-01
+
+### Added
+
+- 225 NE 544th Street in Old Town as a powered-workshop project candidate
+- 1668 NE 592nd Street in Old Town as an updated move-in candidate
+- Verified listing facts and explicit RV, privacy, restriction, insurance, and acquisition unknowns for both properties
+
+### Changed
+
+- Candidate count increased to three, with all new entries retained in the Maybe queue until financing and site verification survive scrutiny
+
 ## [0.7.1] - 2026-07-31
 
 ### Fixed
