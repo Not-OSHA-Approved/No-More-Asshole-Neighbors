@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-08-01",
+    "updated": "2026-08-03",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -370,6 +370,259 @@
       "links": {
         "listing": "https://www.zillow.com/homedetails/1668-NE-592nd-St-Old-Town-FL-32680/460948710_zpid/",
         "map": "https://www.openstreetmap.org/search?query=1668%20NE%20592nd%20Street%2C%20Old%20Town%2C%20FL%2032680",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-004",
+      "name": "626 NE 816th Avenue",
+      "nickname": "The Fiber-Fed Five Acres",
+      "location": {
+        "address": "626 NE 816th Avenue",
+        "city": "Old Town",
+        "state": "FL",
+        "county": "Dixie",
+        "latitude": 29.72,
+        "longitude": -82.9,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 139900,
+        "previousPrice": null,
+        "dateAdded": "2026-08-03",
+        "dateChecked": "2026-08-03"
+      },
+      "land": {
+        "acres": 4.96,
+        "wooded": "partially",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "excellent",
+        "floodRisk": "unknown",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "livable"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "Residential"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "A temporarily higher transition payment may be workable, but the cash to close, insurance, loan terms, and stabilized retirement cost after applying current-home sale proceeds remain unverified."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "existing",
+        "solarPotential": "good",
+        "waterAccessMiles": 2,
+        "internet": "fiber"
+      },
+      "acquisition": {
+        "overlapSolution": "none",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": ["affordability"],
+        "exceptionReason": "The transition and stabilized retirement costs are not verified and no seller-flexibility solution is advertised; nearly five acres, complete utilities, fiber, animal-friendly land, extensive storage, and a powered workshop make it a strong Maybe.",
+        "exceptionalStrengths": [
+          "4.96 usable acres with the home positioned toward the rear",
+          "Existing power, well, septic, fiber, and residential dwelling",
+          "Pole barn with slab or workshop plus barn, pump house, sheds, carport, and boat parking"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 82,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active Dixie-Gilchrist-Levy MLS listing 798889 at $139,900 checked on 2026-08-03",
+          "4.96-acre parcel described as pasture, native vegetation, partially wooded, and suitable for horses",
+          "1993 three-bedroom, two-bath single-wide with a metal roof",
+          "Connected Central Florida Electric service, private well, and septic tank are listed",
+          "Fiber-optic internet service is listed",
+          "Pole barn with slab or workshop, barn, pump house, sheds, carport, and boat parking are listed",
+          "216 feet of paved county-road frontage is listed",
+          "Approximately two miles to a Suwannee River boat ramp, park, and swimming hole",
+          "No monthly HOA is reported",
+          "2025 property tax is listed as $359"
+        ],
+        "unknowns": [
+          "Cash to close, interest rate, insurance, and total transition payment",
+          "Stabilized retirement payment after applying proceeds from the current-home sale",
+          "Prepayment penalty, principal-recast, and refinance options",
+          "Seller financing, lease-purchase, sale contingency, or delayed-closing flexibility; formal terms advertise cash and conventional financing",
+          "Whether deed restrictions affect RVs, animals, boats, vehicles, sheds, or outdoor projects",
+          "Visible neighbors and practical screening from the homesite",
+          "Driveway width, overhead clearance, bearing capacity, and turning room for a 40-foot, 26,000-pound RV",
+          "Immediate RV connection configuration and legal full-time RV occupancy",
+          "Official parcel flood zone, wetlands, and evacuation access",
+          "Condition and capacity of the well, septic, electrical system, and workshop service",
+          "Manufactured-home title status and insurance eligibility",
+          "Exact parcel coordinates; map position remains approximate"
+        ],
+        "notes": "Strong all-around lifestyle candidate. The current payment may be tolerable during the transition, so the deciding financial question is whether sale proceeds can reduce the remaining debt to a comfortable retirement level without punitive loan terms."
+      },
+      "links": {
+        "listing": "https://www.zillow.com/homedetails/626-NE-816th-Ave-Old-Town-FL-32680/44400551_zpid/",
+        "map": "https://www.openstreetmap.org/search?query=626%20NE%20816th%20Avenue%2C%20Old%20Town%2C%20FL%2032680",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-005",
+      "name": "65 SE 153rd Avenue",
+      "nickname": "The Wooded Short-Sale Wildcard",
+      "location": {
+        "address": "65 SE 153rd Avenue",
+        "city": "Old Town",
+        "state": "FL",
+        "county": "Dixie",
+        "latitude": 29.59,
+        "longitude": -83.04,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 149000,
+        "previousPrice": 199000,
+        "dateAdded": "2026-08-03",
+        "dateChecked": "2026-08-03"
+      },
+      "land": {
+        "acres": 5.13,
+        "wooded": "heavily",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "adequate",
+        "floodRisk": "mixed",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "move-in"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "R"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": 1033,
+        "calculationStatus": "estimated",
+        "notes": "The approximately $1,033 broker estimate is acceptable only as a transition payment. Retirement fit depends on reducing the balance with current-home sale proceeds; taxes, insurance, and actual loan assumptions require verification."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "possible",
+        "solarPotential": "limited",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "possible",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": 1033,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": ["affordability"],
+        "exceptionReason": "The estimated payment exceeds the eventual retirement target and the lender-controlled short sale makes timing and financing uncertain; five wooded acres, no HOA, a renovated dwelling, and recently replaced core systems justify keeping it in the Maybe group.",
+        "exceptionalStrengths": [
+          "5.13 wooded acres with mature live oaks and no HOA",
+          "Renovated 2006 dwelling with connected power, well, and septic",
+          "Two-year-old septic, HVAC, and water heater plus a metal roof"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 84,
+        "titleStatus": "concerns",
+        "confirmed": [
+          "Active Stellar MLS listing GC539525 at $149,000 checked on 2026-08-03",
+          "Price reduced from $199,000 and the listing is explicitly marked as a short sale",
+          "5.13-acre wooded corner parcel with mature live oaks",
+          "No HOA is listed",
+          "2006 two-bedroom, two-bath single-wide renovated approximately two years ago",
+          "Connected electricity, private well, and septic tank are listed",
+          "Septic system, HVAC, and water heater are advertised as approximately two years old",
+          "Metal roof, dog run, and lean-to storage are listed",
+          "Paved road surface is listed",
+          "Realtor estimated mortgage payment is approximately $1,033 per month"
+        ],
+        "unknowns": [
+          "Lender approval, approved sale price, required concessions, and actual closing timeline for the short sale",
+          "Cash to close, interest rate, insurance, and complete transition payment",
+          "Stabilized retirement payment after applying proceeds from the current-home sale",
+          "Prepayment penalty, principal-recast, and refinance options",
+          "Owner financing, lease-purchase, sale contingency, or other seller flexibility; none is advertised",
+          "Internet availability",
+          "Visible neighbors and screening on both road frontages of the corner parcel",
+          "Driveway width, overhead clearance, bearing capacity, and turning room for a 40-foot, 26,000-pound RV",
+          "Immediate RV connection configuration and legal full-time RV occupancy",
+          "Deed restrictions and outdoor-storage rules",
+          "Official flood-zone documentation, wetlands, and evacuation access",
+          "Manufactured-home title status and insurance eligibility",
+          "Exact parcel coordinates; map position remains approximate"
+        ],
+        "notes": "The wooded, Becky-facing option. Its payment is not an immediate veto because Chris and Becky can tolerate a higher transition cost, but the short sale must produce a clear path to a much lower stabilized retirement payment."
+      },
+      "links": {
+        "listing": "https://www.realtor.com/realestateandhomes-detail/65-SE-153rd-Ave_Old-Town_FL_32680_M63840-61726",
+        "map": "https://www.openstreetmap.org/search?query=65%20SE%20153rd%20Avenue%2C%20Old%20Town%2C%20FL%2032680",
         "countyGis": null
       }
     }

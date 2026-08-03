@@ -43,15 +43,15 @@ const publicSource = [
 assert.match(index, /<title>No More Asshole Neighbors<\/title>/);
 assert.match(index, /vendor\/leaflet\/leaflet\.css\?v=1\.9\.4/);
 assert.match(index, /vendor\/leaflet\/leaflet\.js\?v=1\.9\.4/);
-assert.match(index, /css\/main\.css\?v=0\.8\.0/);
-assert.match(index, /js\/app\.js\?v=0\.8\.0/);
+assert.match(index, /css\/main\.css\?v=0\.9\.0/);
+assert.match(index, /js\/app\.js\?v=0\.9\.0/);
 assert.doesNotMatch(index, /unpkg\.com/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.8.0");
+assert.equal(database.metadata.version, "0.9.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
-assert.equal(database.properties.length, 3);
+assert.equal(database.properties.length, 5);
 assert.equal(schema.$schema, "https://json-schema.org/draft/2020-12/schema");
 assert.equal(schema.additionalProperties, false);
 assert.match(pagesWorkflow, /branches: \[main\]/);
@@ -210,6 +210,28 @@ assert.equal(updatedOldTownCandidate.dwelling.condition, "move-in");
 assert.equal(updatedOldTownCandidate.qualification.status, "exception");
 assert.deepEqual(qualificationViolations(updatedOldTownCandidate), []);
 assert.match(updatedOldTownCandidate.research.notes, /Becky-facing option/i);
+
+const fiberFiveAcresCandidate = database.properties[3];
+assert.equal(fiberFiveAcresCandidate.id, "NMAN-004");
+assert.equal(fiberFiveAcresCandidate.listing.status, "active");
+assert.equal(fiberFiveAcresCandidate.listing.price, 139900);
+assert.equal(fiberFiveAcresCandidate.land.acres, 4.96);
+assert.equal(fiberFiveAcresCandidate.lifestyle.internet, "fiber");
+assert.equal(fiberFiveAcresCandidate.lifestyle.workshopPotential, "existing");
+assert.equal(fiberFiveAcresCandidate.qualification.status, "exception");
+assert.deepEqual(qualificationViolations(fiberFiveAcresCandidate), []);
+assert.match(fiberFiveAcresCandidate.research.notes, /transition/i);
+
+const woodedShortSaleCandidate = database.properties[4];
+assert.equal(woodedShortSaleCandidate.id, "NMAN-005");
+assert.equal(woodedShortSaleCandidate.listing.status, "active");
+assert.equal(woodedShortSaleCandidate.listing.price, 149000);
+assert.equal(woodedShortSaleCandidate.land.acres, 5.13);
+assert.equal(woodedShortSaleCandidate.land.wooded, "heavily");
+assert.equal(woodedShortSaleCandidate.restrictions.hoa, "none");
+assert.equal(woodedShortSaleCandidate.qualification.status, "exception");
+assert.deepEqual(qualificationViolations(woodedShortSaleCandidate), []);
+assert.match(woodedShortSaleCandidate.research.notes, /transition/i);
 
 const invalidHoaException = structuredClone(representativeException);
 invalidHoaException.restrictions.hoa = "present";

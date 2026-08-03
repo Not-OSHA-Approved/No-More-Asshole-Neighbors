@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented here.
 
+## [0.9.0] - 2026-08-03
+
+### Added
+
+- 626 NE 816th Avenue as a five-acre, fiber-connected workshop candidate
+- 65 SE 153rd Avenue as a wooded five-acre short-sale candidate
+
+### Changed
+
+- Treat the roughly $900 monthly target as the stabilized retirement goal rather than an immediate transition-payment veto
+- Record payoff, principal-recast, refinance, and prepayment questions when evaluating a temporarily higher payment
+- Candidate count increased to five
+
 ## [0.8.0] - 2026-08-01
 
 ### Added

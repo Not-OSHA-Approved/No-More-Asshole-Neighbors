@@ -2,7 +2,7 @@
 
 ## Current version
 
-`0.8.0`
+`0.9.0`
 
 ## Current milestone
 
@@ -28,6 +28,9 @@ Published candidate dashboard with persistent property map.
 - First researched candidate: 8608 Hamster Drive
 - Old Town project candidate: 225 NE 544th Street
 - Old Town move-in candidate: 1668 NE 592nd Street
+- Old Town fiber and workshop candidate: 626 NE 816th Avenue
+- Old Town wooded short-sale candidate: 65 SE 153rd Avenue
+- Transition affordability is evaluated separately from the stabilized retirement-payment target
 - Explicit separation of advertised and verified owner-financing terms
 - Recorded condition, price-history, access, utility, and legal-use unknowns
 - Candidate queue with Match, Maybe, and Rejected states
