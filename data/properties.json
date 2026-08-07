@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.9.0",
+    "version": "0.10.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-08-03",
+    "updated": "2026-08-07",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -623,6 +623,131 @@
       "links": {
         "listing": "https://www.realtor.com/realestateandhomes-detail/65-SE-153rd-Ave_Old-Town_FL_32680_M63840-61726",
         "map": "https://www.openstreetmap.org/search?query=65%20SE%20153rd%20Avenue%2C%20Old%20Town%2C%20FL%2032680",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-006",
+      "name": "986 NE 386th Avenue",
+      "nickname": "The Seller-Financed Three Acres",
+      "location": {
+        "address": "986 NE 386th Avenue",
+        "city": "Old Town",
+        "state": "FL",
+        "county": "Dixie",
+        "latitude": 29.65,
+        "longitude": -83.02,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 149000,
+        "previousPrice": 172000,
+        "dateAdded": "2026-08-07",
+        "dateChecked": "2026-08-07"
+      },
+      "land": {
+        "acres": 3,
+        "wooded": "partially",
+        "roadAccess": "legal-unpaved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "adequate",
+        "floodRisk": "low",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "move-in"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "unknown",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "Residential"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": 1210,
+        "calculationStatus": "estimated",
+        "notes": "The advertised seller-financing terms produce an estimated $1,099 principal-and-interest payment and roughly $1,210 total before utilities. That is workable only as a transition cost; retirement fit depends on paying off or restructuring the note after the current home sells."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "existing",
+        "solarPotential": "good",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "possible",
+        "upfrontCashRequired": 50000,
+        "ownerFinancing": "available",
+        "monthlyPayment": 1099,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "some"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": ["no-hoa", "affordability"],
+        "exceptionReason": "The $50,000 down payment does not solve the immediate transition problem, HOA or deed restrictions remain unverified, and the estimated transition cost exceeds the retirement target; explicit seller financing, three usable acres, complete utilities, and a remodeled dwelling justify keeping it in the Maybe group.",
+        "exceptionalStrengths": [
+          "Explicit owner financing at 6 percent over 10 years",
+          "Three secluded, fenced acres with a rectangular layout",
+          "Remodeled dwelling with connected power, well, septic, storage buildings, and a covered pavilion"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 82,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active Dixie-Gilchrist-Levy MLS listing 793649 at $149,000 checked on 2026-08-07",
+          "Price reduced from $172,000 after approximately 20 months on market",
+          "Three secluded, fenced acres with a level or mixed, rectangular parcel",
+          "Remodeled 1980 manufactured home with connected electricity, well, and septic",
+          "Two storage buildings, covered pavilion, and large well house are listed",
+          "Seller offers financing with $50,000 down, 6 percent interest, and a 10-year term with proof of income",
+          "The $99,000 financed balance produces approximately $1,099 monthly principal and interest",
+          "Redfin models minimal building flood risk"
+        ],
+        "unknowns": [
+          "Whether the seller will materially reduce the $50,000 down payment or coordinate closing with the current-home sale",
+          "Whether extra principal payments are penalty-free and whether the seller will recast the note after a lump-sum payment",
+          "Official FEMA flood zone, wetlands, drainage, and evacuation access",
+          "Year-round condition of the limerock county road after prolonged rain",
+          "Whether Greenview subdivision deed restrictions affect RV occupancy, boats, vehicles, animals, sheds, or outdoor projects",
+          "Whether an HOA or mandatory association exists",
+          "Legal full-time RV occupancy and immediate power, water, and septic hookup configuration",
+          "Driveway width, overhead clearance, bearing capacity, and turning room for a 40-foot, 26,000-pound RV",
+          "Visible neighbors and practical screening",
+          "Insurance eligibility and actual premium for the 1980 manufactured home",
+          "Internet service",
+          "Reason the April 2026 pending contract failed",
+          "Exact parcel coordinates; map position remains approximate"
+        ],
+        "notes": "A strong acquisition-structure lead with unusually specific seller terms. Keep it prominent, but do not mistake available financing for workable financing until the down payment, prepayment, payoff, and recast terms are negotiated in writing."
+      },
+      "links": {
+        "listing": "https://www.redfin.com/FL/Old-Town/986-NE-386th-Ave-32680/home/132527904",
+        "map": "https://www.openstreetmap.org/search?query=986%20NE%20386th%20Avenue%2C%20Old%20Town%2C%20FL%2032680",
         "countyGis": null
       }
     }

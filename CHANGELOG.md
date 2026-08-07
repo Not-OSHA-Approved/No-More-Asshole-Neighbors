@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented here.
 
+## [0.10.0] - 2026-08-07
+
+### Added
+
+- 986 NE 386th Avenue as a three-acre seller-financed candidate
+- Exact advertised financing terms, estimated transition cost, and payoff or recast questions
+
+### Changed
+
+- Candidate count increased to six
+
 ## [0.9.0] - 2026-08-03
 
 ### Added
