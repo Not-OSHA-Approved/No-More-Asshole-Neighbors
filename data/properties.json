@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.10.0",
+    "version": "0.11.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-08-07",
+    "updated": "2026-08-24",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -87,7 +87,9 @@
       },
       "qualification": {
         "status": "exception",
-        "missedRequirements": ["affordability"],
+        "missedRequirements": [
+          "affordability"
+        ],
         "exceptionReason": "The total monthly cost and seller-financing terms are unknown, but the property combines two acres, an existing dwelling and utilities, no HOA, and advertised owner financing.",
         "exceptionalStrengths": [
           "Owner financing is advertised",
@@ -208,7 +210,10 @@
       },
       "qualification": {
         "status": "exception",
-        "missedRequirements": ["no-hoa", "affordability"],
+        "missedRequirements": [
+          "no-hoa",
+          "affordability"
+        ],
         "exceptionReason": "The estimated payment is under the target only with roughly $30,000 cash to close, and HOA or deed restrictions remain unverified; the powered pole barn, existing utilities, 2.88 acres, and project-house condition make it worth investigating.",
         "exceptionalStrengths": [
           "Large powered pole barn or workshop plus a shed",
@@ -330,7 +335,9 @@
       },
       "qualification": {
         "status": "exception",
-        "missedRequirements": ["affordability"],
+        "missedRequirements": [
+          "affordability"
+        ],
         "exceptionReason": "The estimated payment is near the target but real loan terms and cash to close are unverified, with no seller flexibility advertised; two acres, no HOA, a renovated dwelling, and newly replaced core utility components justify keeping it in the Maybe group.",
         "exceptionalStrengths": [
           "New well, septic, metal roof, windows, water heater, and appliances",
@@ -452,7 +459,9 @@
       },
       "qualification": {
         "status": "exception",
-        "missedRequirements": ["affordability"],
+        "missedRequirements": [
+          "affordability"
+        ],
         "exceptionReason": "The transition and stabilized retirement costs are not verified and no seller-flexibility solution is advertised; nearly five acres, complete utilities, fiber, animal-friendly land, extensive storage, and a powered workshop make it a strong Maybe.",
         "exceptionalStrengths": [
           "4.96 usable acres with the home positioned toward the rear",
@@ -578,7 +587,9 @@
       },
       "qualification": {
         "status": "exception",
-        "missedRequirements": ["affordability"],
+        "missedRequirements": [
+          "affordability"
+        ],
         "exceptionReason": "The estimated payment exceeds the eventual retirement target and the lender-controlled short sale makes timing and financing uncertain; five wooded acres, no HOA, a renovated dwelling, and recently replaced core systems justify keeping it in the Maybe group.",
         "exceptionalStrengths": [
           "5.13 wooded acres with mature live oaks and no HOA",
@@ -705,7 +716,10 @@
       },
       "qualification": {
         "status": "exception",
-        "missedRequirements": ["no-hoa", "affordability"],
+        "missedRequirements": [
+          "no-hoa",
+          "affordability"
+        ],
         "exceptionReason": "The $50,000 down payment does not solve the immediate transition problem, HOA or deed restrictions remain unverified, and the estimated transition cost exceeds the retirement target; explicit seller financing, three usable acres, complete utilities, and a remodeled dwelling justify keeping it in the Maybe group.",
         "exceptionalStrengths": [
           "Explicit owner financing at 6 percent over 10 years",
@@ -748,6 +762,130 @@
       "links": {
         "listing": "https://www.redfin.com/FL/Old-Town/986-NE-386th-Ave-32680/home/132527904",
         "map": "https://www.openstreetmap.org/search?query=986%20NE%20386th%20Avenue%2C%20Old%20Town%2C%20FL%2032680",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-007",
+      "name": "86 North Street",
+      "nickname": "The Ready-Made RV Workshop",
+      "location": {
+        "address": "86 North Street",
+        "city": "Carriere",
+        "state": "MS",
+        "county": "Pearl River",
+        "latitude": 30.62,
+        "longitude": -89.65,
+        "setting": "rural",
+        "region": "other",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 154000,
+        "previousPrice": 175000,
+        "dateAdded": "2026-08-24",
+        "dateChecked": "2026-08-21"
+      },
+      "land": {
+        "acres": 2,
+        "wooded": "partially",
+        "roadAccess": "legal-paved",
+        "rvAccess": "likely",
+        "evacuationAccess": "likely",
+        "usableSpace": "adequate",
+        "floodRisk": "low",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": false,
+        "type": "none",
+        "condition": "none"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "public",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "none-known",
+        "outdoorStorage": "unrestricted",
+        "zoning": "No restrictions advertised; outside Picayune city limits"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": 950,
+        "calculationStatus": "estimated",
+        "notes": "Estimated transition cost is roughly $1,100–$1,300 per month. After applying approximately $30,000–$40,000 from the current-home sale, the stabilized estimate is roughly $850–$1,000 per month. Actual loan terms, taxes, insurance, and cash to close remain unverified."
+      },
+      "legalUse": {
+        "residentialPath": "rv-allowed",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "short",
+        "gatePotential": "possible",
+        "workshopPotential": "existing",
+        "solarPotential": "good",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "none",
+        "upfrontCashRequired": 37500,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": 950,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "affordability"
+        ],
+        "exceptionReason": "The likely transition payment exceeds the retirement target and no seller-financing or overlap solution is advertised; the existing 50-amp RV hookup, complete utilities, no advertised restrictions, low modeled flood risk, and exceptional workshop make it a strong Maybe.",
+        "exceptionalStrengths": [
+          "Existing 50-amp RV hookup with power, public water, and septic already connected",
+          "30-by-50 three-bay air-conditioned shop with half-bath and two 16-by-50 lean-tos",
+          "Two fenced acres outside Picayune city limits with no restrictions advertised and mobile homes permitted"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 79,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active MLS-linked listing at $154,000 verified on 2026-08-21",
+          "Price reduced from $175,000 to $154,000",
+          "Two fully usable fenced acres outside Picayune city limits",
+          "Electricity, public water, septic, and a 50-amp RV hookup are advertised as connected",
+          "30-by-50 three-bay shop includes a half-bath and air conditioning, plus two 16-by-50 lean-tos",
+          "Double driveway and asphalt-road access are advertised",
+          "No restrictions are advertised and mobile homes are expressly permitted",
+          "Mature oak and pecan trees are present",
+          "Approximate elevation is 229 feet and Redfin models flood risk at 1 out of 10"
+        ],
+        "unknowns": [
+          "Written county confirmation that full-time RV occupancy is legal",
+          "Whether the existing septic approval covers continuous RV occupancy",
+          "Official FEMA flood zone and parcel-level flood documentation",
+          "Gate width, driveway geometry, overhead clearance, bearing capacity, and turning room for a 40-foot, 26,000-pound RV",
+          "Visible neighbors and practical privacy screening",
+          "Internet service",
+          "Actual financing terms, cash to close, property taxes, insurance, and stabilized monthly cost",
+          "Whether the exact two-acre layout leaves enough usable room for the RV, vehicles, boats, animals, and outdoor projects",
+          "Distance and practical access to Gulf recreation"
+        ],
+        "notes": "This is unusually close to move-in-ready for the RV-and-workshop plan. Keep it prominent, but the deal lives or dies on written confirmation of legal full-time RV occupancy and continuous septic use."
+      },
+      "links": {
+        "listing": "https://www.landsearch.com/properties/86-north-st-carriere-ms-39426/5316638",
+        "map": "https://www.openstreetmap.org/search?query=86%20North%20Street%2C%20Carriere%2C%20MS%2039426",
         "countyGis": null
       }
     }
