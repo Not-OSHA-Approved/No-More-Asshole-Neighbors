@@ -100,5 +100,17 @@ const noLegalResidenceResult = scoreProperty(noLegalResidence);
 assert.equal(noLegalResidenceResult.eligible, false);
 assert.ok(noLegalResidenceResult.vetoes.includes("no-legal-residential-path"));
 
+const condemnedProperty = idealProperty();
+condemnedProperty.dwelling = { exists: true, type: "condemned-structure", condition: "condemned" };
+const condemnedResult = scoreProperty(condemnedProperty);
+assert.equal(condemnedResult.eligible, false);
+assert.ok(condemnedResult.vetoes.includes("officially-condemned-structure"));
+
+const uglyButLegalProperty = idealProperty();
+uglyButLegalProperty.dwelling = { exists: true, type: "house", condition: "major-rehab" };
+const uglyButLegalResult = scoreProperty(uglyButLegalProperty);
+assert.equal(uglyButLegalResult.eligible, true);
+assert.deepEqual(uglyButLegalResult.vetoes, []);
+
 console.log("Validated independent 100-point retirement and acquisition scores.");
-console.log("Confirmed privacy penalties and all scoring hard vetoes.");
+console.log("Confirmed privacy penalties, condemnation veto, and legal major-rehab eligibility.");

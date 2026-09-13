@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented here.
 
+## [0.12.0] - 2026-09-13
+
+### Added
+
+- The full buy, delayed-close, prepare, move, pay-down, and retire mission sequence
+- Live count of candidates that meet every requirement
+- Visible “fits” and “does not fit” criteria for the actual failed-homestead search
+- Hard veto for an officially condemned structure
+
+### Changed
+
+- Center the project on usable high-and-dry land, working utilities, RV camouflage,
+  powered outbuildings, visual privacy, and a workable acquisition sequence
+- Treat a dilapidated but legally existing structure as potentially useful rather
+  than requiring a livable house
+- Align all project version references after the v0.11.0 candidate-data update
+
+## [0.11.0] - 2026-08-24
+
+### Added
+
+- 86 North Street in Carriere, Mississippi as an RV-hookup and workshop candidate
+
 ## [0.10.0] - 2026-08-07
 
 ### Added

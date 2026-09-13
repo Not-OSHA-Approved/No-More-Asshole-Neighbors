@@ -32,6 +32,7 @@ function hardVetoes(property) {
   if (property.legalUse.residentialPath === "none") vetoes.push("no-legal-residential-path");
   if (property.land.rvAccess === "impossible") vetoes.push("rv-access-impossible");
   if (property.land.evacuationAccess === "blocked") vetoes.push("evacuation-blocked");
+  if (property.dwelling?.condition === "condemned") vetoes.push("officially-condemned-structure");
 
   return vetoes;
 }

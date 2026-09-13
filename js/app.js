@@ -15,6 +15,7 @@ let propertyMarker;
 async function loadProjectFoundation() {
   const status = document.getElementById("system-status");
   const propertyCount = document.getElementById("property-count");
+  const matchCount = document.getElementById("match-count");
 
   try {
     const response = await fetch(PROPERTY_DATA_URL, { cache: "no-store" });
@@ -30,6 +31,9 @@ async function loadProjectFoundation() {
     }
 
     propertyCount.textContent = String(data.properties.length);
+    matchCount.textContent = String(data.properties.filter(property =>
+      property.qualification.status === "match"
+    ).length);
     renderCandidates(data.properties);
     status.classList.add("ready");
     status.lastChild.textContent = " Foundation online";

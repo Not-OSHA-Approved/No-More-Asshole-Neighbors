@@ -43,15 +43,15 @@ const publicSource = [
 assert.match(index, /<title>No More Asshole Neighbors<\/title>/);
 assert.match(index, /vendor\/leaflet\/leaflet\.css\?v=1\.9\.4/);
 assert.match(index, /vendor\/leaflet\/leaflet\.js\?v=1\.9\.4/);
-assert.match(index, /css\/main\.css\?v=0\.10\.0/);
-assert.match(index, /js\/app\.js\?v=0\.10\.0/);
+assert.match(index, /css\/main\.css\?v=0\.12\.0/);
+assert.match(index, /js\/app\.js\?v=0\.12\.0/);
 assert.doesNotMatch(index, /unpkg\.com/);
 assert.match(app, /data\/properties\.json/);
 assert.equal(database.metadata.project, "No More Asshole Neighbors");
-assert.equal(database.metadata.version, "0.10.0");
+assert.equal(database.metadata.version, "0.12.0");
 assert.equal(database.metadata.schemaVersion, "1.1.0");
 assert.equal(database.metadata.schema, "property.schema.json");
-assert.equal(database.properties.length, 6);
+assert.equal(database.properties.length, 7);
 assert.equal(schema.$schema, "https://json-schema.org/draft/2020-12/schema");
 assert.equal(schema.additionalProperties, false);
 assert.match(pagesWorkflow, /branches: \[main\]/);
@@ -81,6 +81,15 @@ assert.ok(matchRule, "Schema must define the full-match rule.");
 assert.equal(matchRule.then.properties.land.properties.acres.minimum, 2);
 assert.equal(matchRule.then.properties.restrictions.properties.hoa.const, "none");
 assert.equal(matchRule.then.properties.affordability.properties.fit.const, "comfortable");
+assert.equal(matchRule.then.properties.utilities.properties.overall.const, "existing");
+assert.equal(matchRule.then.properties.land.properties.floodRisk.const, "low");
+assert.deepEqual(matchRule.then.properties.legalUse.properties.fullTimeRvOccupancy.enum, ["allowed", "conditional"]);
+
+const condemnedRule = schema.allOf.find(rule =>
+  rule.if?.properties?.dwelling?.properties?.condition?.const === "condemned"
+);
+assert.ok(condemnedRule, "Schema must define the official-condemnation veto.");
+assert.equal(condemnedRule.then.properties.qualification.properties.status.const, "rejected");
 
 const exceptionRule = schema.allOf.find(rule =>
   rule.if?.properties?.qualification?.properties?.status?.const === "exception"
@@ -107,6 +116,10 @@ function qualificationViolations(record) {
     violations.push("hoa-must-reject");
   }
 
+  if (record.dwelling?.condition === "condemned" && status !== "rejected") {
+    violations.push("condemned-must-reject");
+  }
+
   if (status === "match") {
     if (record.land.acres < 2) violations.push("minimum-acreage");
     if (record.restrictions.hoa !== "none") violations.push("no-hoa");
@@ -116,9 +129,11 @@ function qualificationViolations(record) {
     if (record.affordability.fit !== "comfortable") {
       violations.push("affordability");
     }
-    if (!record.dwelling.exists && record.utilities.overall !== "existing") {
-      violations.push("existing-utilities-or-dwelling");
-    }
+    if (record.utilities.overall !== "existing") violations.push("working-utilities");
+    if (!['allowed', 'conditional'].includes(record.legalUse.fullTimeRvOccupancy)) violations.push("rv-occupancy");
+    if (record.land.floodRisk !== "low") violations.push("high-and-dry");
+    if (!['excellent', 'adequate'].includes(record.land.usableSpace)) violations.push("usable-space");
+    if (!['none', 'few'].includes(record.lifestyle.visibleNeighbors)) violations.push("privacy");
   }
 
   if (status === "exception") {
@@ -137,11 +152,13 @@ function qualificationViolations(record) {
 
 const representativeMatch = {
   location: { setting: "rural" },
-  land: { acres: 3.2 },
-  dwelling: { exists: true },
+  land: { acres: 3.2, usableSpace: "excellent", floodRisk: "low" },
+  dwelling: { exists: true, condition: "major-rehab" },
   utilities: { overall: "existing" },
   restrictions: { hoa: "none" },
   affordability: { fit: "comfortable" },
+  legalUse: { fullTimeRvOccupancy: "allowed" },
+  lifestyle: { visibleNeighbors: "none" },
   qualification: {
     status: "match",
     missedRequirements: [],
@@ -239,12 +256,20 @@ assert.deepEqual(
   qualificationViolations(invalidHoaException).sort(),
   ["hoa-cannot-be-exception", "hoa-must-reject"]
 );
+
+const invalidCondemnedException = structuredClone(representativeException);
+invalidCondemnedException.dwelling.condition = "condemned";
+assert.deepEqual(qualificationViolations(invalidCondemnedException), ["condemned-must-reject"]);
 assert.doesNotMatch(publicSource, /JOE VISION|Joe Vision|joe-vision/);
 assert.match(index, /id="map"/);
 assert.match(app, /L\.map\("map"/);
 assert.match(app, /L\.marker\(location\)/);
 assert.match(app, /openstreetmap\.org/);
 assert.match(contents.get("css/main.css"), /\.map-panel[\s\S]*position: sticky/);
+assert.match(index, /id="match-count"/);
+assert.match(index, /Buy\. Prepare\. Escape\. Retire\./);
+assert.match(index, /Official condemnation, demolition orders/);
+assert.match(app, /qualification\.status === "match"/);
 
 console.log(`Validated ${requiredFiles.length} project files.`);
 console.log("Confirmed match, exception, rejection, and hard HOA schema rules.");

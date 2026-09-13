@@ -35,6 +35,10 @@ The preferred transaction allows Chris and Becky to secure and occupy the new
 property, move the RV, animals, vehicles, boats, shed, and equipment, sell the
 current house vacant, and use the proceeds to pay off the new property.
 
+A livable house is not required. A dilapidated but legally existing structure
+can be valuable as a utility host, address, storage shell, and visual camouflage
+for Grace. Powered barns, sheds, workshops, and other outbuildings are preferred.
+
 ## Hard vetoes
 
 The engine marks a property ineligible before interpreting either score when it
@@ -47,9 +51,15 @@ has any of these verified conditions:
 - no legal residential path
 - impossible access for the 40-foot, approximately 26,000-pound RV
 - blocked emergency evacuation route
+- officially condemned structure or active demolition obligation
 
 Unknown information is not a veto, but it earns few or no points and remains a
 verification requirement.
+
+`major-rehab` is not the same as `condemned`. The former may be an advantage when
+the structure can legally remain and utilities can stay connected. The latter is
+a veto because demolition deadlines, code liens, utility lockouts, and mandatory
+remediation can destroy the acquisition and move sequence.
 
 ## Important thresholds
 
@@ -60,3 +70,7 @@ verification requirement.
 - A three-to-five-year balloon is acceptable when early payoff is allowed.
 - Water within 20 miles is good and within 30 miles is acceptable.
 - Internet preference is fiber, cable, 5G, then Starlink.
+- Privacy may come from setback, trees, brush, terrain, or building placement;
+  a perimeter fence is not required when sight lines already work.
+- Rough access is acceptable when there is enough dry width to create lanes,
+  parking, and turnaround space with clearing and free mulch.

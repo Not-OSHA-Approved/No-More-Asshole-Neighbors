@@ -213,10 +213,19 @@
       },
       "then": {
         "properties": {
-          "land": { "properties": { "acres": { "type": "number", "minimum": 2 } } },
+          "utilities": { "properties": { "overall": { "const": "existing" } } },
           "restrictions": { "properties": { "hoa": { "const": "none" } } },
           "affordability": { "properties": { "fit": { "const": "comfortable" } } },
           "location": { "properties": { "setting": { "enum": ["rural", "semi-rural"] } } },
+          "land": {
+            "properties": {
+              "acres": { "type": "number", "minimum": 2 },
+              "usableSpace": { "enum": ["excellent", "adequate"] },
+              "floodRisk": { "const": "low" }
+            }
+          },
+          "legalUse": { "properties": { "fullTimeRvOccupancy": { "enum": ["allowed", "conditional"] } } },
+          "lifestyle": { "properties": { "visibleNeighbors": { "enum": ["none", "few"] } } },
           "qualification": {
             "properties": {
               "missedRequirements": { "maxItems": 0 },
@@ -225,11 +234,27 @@
               "rejectionReasons": { "maxItems": 0 }
             }
           }
-        },
-        "anyOf": [
-          { "properties": { "dwelling": { "properties": { "exists": { "const": true } } } } },
-          { "properties": { "utilities": { "properties": { "overall": { "const": "existing" } } } } }
-        ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "dwelling": {
+            "properties": { "condition": { "const": "condemned" } },
+            "required": ["condition"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "qualification": {
+            "properties": {
+              "status": { "const": "rejected" },
+              "rejectionReasons": { "minItems": 1 }
+            }
+          }
+        }
       }
     },
     {

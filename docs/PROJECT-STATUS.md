@@ -2,11 +2,12 @@
 
 ## Current version
 
-`0.10.0`
+`0.12.0`
 
 ## Current milestone
 
-Published candidate dashboard with persistent property map.
+Published candidate dashboard aligned to the failed-homestead, RV-camouflage,
+buy-prep-move-sell mission.
 
 ## Included
 
@@ -38,6 +39,12 @@ Published candidate dashboard with persistent property map.
 - Visible confirmed facts, unknowns, red flags, and current-source links
 - Responsive one-column mobile presentation
 - Automated GitHub Pages deployment from `main`
+- Live count of full matches; zero is an acceptable and honest result
+- Explicit buy, delayed-close, land-prep, Grace-move, debt-paydown sequence
+- Visible fit and rejection criteria for acreage, utilities, privacy, structures,
+  outbuildings, acquisition terms, flood risk, and parcel geometry
+- Dilapidated legal structures treated as potentially useful RV camouflage
+- Official condemnation treated as a hard veto
 
 ## Intentionally deferred
 
@@ -46,4 +53,4 @@ Published candidate dashboard with persistent property map.
 
 ## Next proposed feature
 
-Add candidate search and filtering without obscuring the persistent map.
+Await Chris's next approved change.

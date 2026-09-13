@@ -252,6 +252,7 @@ blockquote {
 .metrics article,
 .panel,
 .map-shell,
+.mission,
 .principles {
   border: 1px solid var(--line);
   background: linear-gradient(145deg, rgb(32 43 32 / 96%), rgb(20 27 20 / 96%));
@@ -284,6 +285,62 @@ blockquote {
   display: grid;
   grid-template-columns: minmax(230px, .65fr) minmax(440px, 1.5fr) minmax(230px, .65fr);
   gap: 18px;
+}
+
+.mission {
+  margin-bottom: 18px;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: minmax(240px, .65fr) minmax(0, 1.35fr);
+  gap: 34px;
+  border-radius: 18px;
+}
+
+.mission-heading h2,
+.criteria h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.mission-heading p:last-child {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.mission-steps {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  counter-reset: mission-step;
+}
+
+.mission-steps li {
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgb(16 20 15 / 45%);
+  counter-increment: mission-step;
+}
+
+.mission-steps strong,
+.mission-steps span {
+  display: block;
+}
+
+.mission-steps strong::before {
+  content: counter(mission-step) ". ";
+  color: var(--moss);
+}
+
+.mission-steps span {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.5;
 }
 
 .side-rail {
@@ -513,6 +570,20 @@ blockquote {
   border-radius: 18px;
 }
 
+.criteria.bad-fit {
+  padding-left: 34px;
+  border-left: 1px solid var(--line);
+}
+
+.criteria.bad-fit .eyebrow,
+.criteria.bad-fit li::marker {
+  color: var(--danger);
+}
+
+.criteria.good-fit li::marker {
+  color: var(--pine);
+}
+
 .principles ul {
   margin: 0;
   padding-left: 22px;
@@ -535,8 +606,16 @@ footer strong {
 
 @media (max-width: 1050px) {
   .hero,
+  .mission,
   .principles {
     grid-template-columns: 1fr;
+  }
+
+  .criteria.bad-fit {
+    padding-top: 30px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 
   .workspace {
@@ -591,6 +670,10 @@ footer strong {
 
   .metrics,
   .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-steps {
     grid-template-columns: 1fr;
   }
 

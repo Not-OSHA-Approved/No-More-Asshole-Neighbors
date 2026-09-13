@@ -6,7 +6,7 @@
   <meta name="description" content="A rural retirement property decision-support dashboard for Chris and Becky.">
   <title>No More Asshole Neighbors</title>
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css?v=1.9.4">
-    <link rel="stylesheet" href="css/main.css?v=0.10.0">
+  <link rel="stylesheet" href="css/main.css?v=0.12.0">
 </head>
 <body>
   <header class="site-header">
@@ -29,8 +29,8 @@
         <p class="eyebrow">The retirement reality check</p>
         <h1>Could we happily <span>retire here?</span></h1>
         <p class="hero-copy">
-          Find affordable rural property with room to breathe, utilities already
-          in place, and as few visible neighbors as reasonably possible.
+          Find a failed homestead with room to breathe, working infrastructure,
+          and enough privacy to hide Grace behind a legally existing structure.
         </p>
       </div>
       <blockquote>
@@ -44,17 +44,33 @@
         <strong id="property-count">0</strong>
       </article>
       <article>
-        <span>Minimum acreage</span>
+        <span>Current matches</span>
+        <strong id="match-count">0</strong>
+      </article>
+      <article>
+        <span>Minimum usable acreage</span>
         <strong>2+</strong>
       </article>
       <article>
-        <span>Household income target</span>
-        <strong>$3K/mo</strong>
-      </article>
-      <article>
         <span>Primary search area</span>
-        <strong>West / Central FL</strong>
+        <strong>Brooksville area</strong>
       </article>
+    </section>
+
+    <section class="mission" aria-labelledby="mission-heading">
+      <div class="mission-heading">
+        <p class="eyebrow">The actual mission</p>
+        <h2 id="mission-heading">Buy. Prepare. Escape. Retire.</h2>
+        <p>Secure the new property before Maltby Road closes, prepare it, move Grace and the entire collection, then use the old-house proceeds to kill as much debt as possible.</p>
+      </div>
+      <ol class="mission-steps">
+        <li><strong>Buy the unicorn</strong><span>Creative acquisition, existing utilities, privacy, and usable land.</span></li>
+        <li><strong>Sell with time</strong><span>List Maltby Road with a delayed closing long enough to prepare the landing zone.</span></li>
+        <li><strong>Prepare the land</strong><span>Mulch, clear, create lanes and parking, verify utilities, and connect Grace.</span></li>
+        <li><strong>Move everything</strong><span>Grace, catdominium, sheds, animals, boats, trailers, vehicles, tools, and the rest of the shit.</span></li>
+        <li><strong>Close and pay down</strong><span>Close the old house, retire existing mortgages, reduce new debt, and preserve an emergency reserve.</span></li>
+        <li><strong>Live quietly</strong><span>Low overhead, no HOA, no musical trailers, and no asshole neighbors.</span></li>
+      </ol>
     </section>
 
     <section class="workspace" aria-label="Property evaluation workspace">
@@ -91,25 +107,42 @@
     </section>
 
     <section class="principles" aria-labelledby="principles-heading">
-      <div>
-        <p class="eyebrow">What matters</p>
-        <h2 id="principles-heading">A home base, not a status symbol.</h2>
+      <div class="criteria good-fit">
+        <p class="eyebrow">Fits the mission</p>
+        <h2 id="principles-heading">Ugly can be useful.</h2>
+        <ul>
+          <li>At least two wide, usable, high-and-dry acres</li>
+          <li>Power, water, and septic already present and usable</li>
+          <li>Uninhabitable but legal house for RV camouflage</li>
+          <li>Powered sheds, barns, workshops, and outbuildings</li>
+          <li>Home and Grace hidden from the road by distance or vegetation</li>
+          <li>Room for a solar gate, fleet parking, catdominium, and projects</li>
+          <li>Overgrowth and small trees that Chris can clear or mulch</li>
+          <li>Owner financing, assumable debt, delayed funding, or flexible closing</li>
+        </ul>
       </div>
-      <ul>
-        <li>Existing power, water, septic, or a dwelling</li>
-        <li>No HOA and room for a workshop</li>
-        <li>Wooded privacy and remote-gate potential</li>
-        <li>Solar-friendly without sacrificing useful shade</li>
-      </ul>
+      <div class="criteria bad-fit">
+        <p class="eyebrow">Does not fit</p>
+        <h2>Expensive problems we cannot fix.</h2>
+        <ul>
+          <li>HOA, hostile deed restrictions, or prohibited RV occupancy</li>
+          <li>Official condemnation, demolition orders, code liens, or blocked utility reconnection</li>
+          <li>Flood zones, wetlands, soup-like ground, or unreliable evacuation access</li>
+          <li>Skinny flag lots, visible neighbors, or acreage without usable width</li>
+          <li>No legal residential path or no way to hide and occupy Grace</li>
+          <li>Acquisition terms requiring Maltby Road to close before the move</li>
+          <li>Long-term debt that follows Chris and Becky into retirement</li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer>
-    <strong>No More Asshole Neighbors v0.10.0</strong>
+    <strong>No More Asshole Neighbors v0.12.0</strong>
     <span>Built by Chris Farwell · Foundation established July 2026</span>
   </footer>
 
   <script src="vendor/leaflet/leaflet.js?v=1.9.4"></script>
-    <script type="module" src="js/app.js?v=0.10.0"></script>
+  <script type="module" src="js/app.js?v=0.12.0"></script>
 </body>
 </html>

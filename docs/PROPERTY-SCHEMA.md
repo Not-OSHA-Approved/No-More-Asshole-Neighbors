@@ -10,10 +10,14 @@ Each record in `data/properties.json` follows
 The property meets every required criterion:
 
 - at least 2 acres
-- an existing dwelling or existing utilities
+- existing working utilities
 - no HOA
 - rural or semi-rural setting
 - comfortable affordability fit
+- no verified hard veto, including official condemnation
+- low flood risk and adequate usable parcel geometry
+- full-time RV occupancy allowed or conditionally allowed
+- no more than a few visible neighbors
 
 A match cannot list missed requirements, exception strengths, or rejection
 reasons.
@@ -42,6 +46,14 @@ If `restrictions.hoa` is `present`, the schema requires:
 
 Unknown HOA status may remain under investigation, but it cannot qualify as a
 full match.
+
+## Structure condition
+
+`major-rehab` means an ugly or uninhabitable structure that may legally remain.
+That can be useful RV camouflage and a host for existing utility service.
+`condemned` means an official code-enforcement or demolition condition and is a
+hard veto until the order, liens, deadlines, remediation requirements, and
+utility-reconnection path are resolved in writing.
 
 ## Unknown information
 
