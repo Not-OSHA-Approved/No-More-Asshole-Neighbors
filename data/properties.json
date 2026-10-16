@@ -4,7 +4,7 @@
     "version": "0.12.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-09-13",
+    "updated": "2026-10-16",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -886,6 +886,364 @@
       "links": {
         "listing": "https://www.landsearch.com/properties/86-north-st-carriere-ms-39426/5316638",
         "map": "https://www.openstreetmap.org/search?query=86%20North%20Street%2C%20Carriere%2C%20MS%2039426",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-008",
+      "name": "15363 SE 156th Place Road",
+      "nickname": "The Flag-Shaped Three Acres",
+      "location": {
+        "address": "15363 SE 156th Place Road",
+        "city": "Weirsdale",
+        "state": "FL",
+        "county": "Marion",
+        "latitude": 28.98,
+        "longitude": -81.92,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "unknown",
+        "price": 89000,
+        "previousPrice": null,
+        "dateAdded": "2026-10-16",
+        "dateChecked": "2026-10-16"
+      },
+      "land": {
+        "acres": 3,
+        "wooded": "partially",
+        "roadAccess": "uncertain",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "unknown",
+        "floodRisk": "unknown",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "major-rehab"
+      },
+      "utilities": {
+        "overall": "partial",
+        "power": "unknown",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "unknown",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "A-1 (advertised)"
+      },
+      "affordability": {
+        "fit": "unknown",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "Price from prior listing discovery only. Financing, property taxes, insurance, infrastructure costs and actual retirement carrying cost not assessed."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "unknown",
+        "workshopPotential": "unknown",
+        "solarPotential": "unknown",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "unknown",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "existing-utilities",
+          "legal-rv-occupancy"
+        ],
+        "exceptionReason": "Added for Becky to review at user's request. Full-time RV legality and suitability remain unconfirmed; listed price and acreage merit further screening.",
+        "exceptionalStrengths": [
+          "Listing advertised at $89,000 for 3 acres; status not independently rechecked on 2026-10-16",
+          "Listing reports an existing mobile home in poor condition and a well and septic system",
+          "Listing describes A-1 zoning"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 30,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Listing advertised at $89,000 for 3 acres; status not independently rechecked on 2026-10-16",
+          "Listing reports an existing mobile home in poor condition and a well and septic system",
+          "Listing describes A-1 zoning"
+        ],
+        "unknowns": [
+          "Current listing status and price",
+          "Actual well and septic condition and lawful reuse",
+          "Legal width and ownership of the narrow road-access corridor",
+          "How much of the unusually shaped parcel is usable",
+          "Contour depression, drainage, flood and wetland status",
+          "Whether indefinite RV residence is lawful under county rules",
+          "No HOA, deed restrictions and accurate parcel boundary",
+          "Practical driveway for 40-foot RV, pole barn, and sheds",
+          "Accurate parcel geolocation"
+        ],
+        "notes": "Review with Becky: secluded-looking land but flag-shaped access and a low central area seen in the parcel screenshot. Existing utilities are advertised, not verified."
+      },
+      "links": {
+        "listing": "https://www.landsearch.com/properties/15363-se-156th-place-rd-weirsdale-fl-32195/5613262",
+        "map": "https://www.openstreetmap.org/search?query=15363%20SE%20156th%20Place%20Road%2C%20Weirsdale%2C%20FL",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-009",
+      "name": "SW 90th Street Tract",
+      "nickname": "The High-and-Dry Dunnellon Tract",
+      "location": {
+        "address": "SW 90th Street (parcel number unverified)",
+        "city": "Dunnellon",
+        "state": "FL",
+        "county": "Marion",
+        "latitude": 29.05,
+        "longitude": -82.36,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "unknown",
+        "price": 99000,
+        "previousPrice": null,
+        "dateAdded": "2026-10-16",
+        "dateChecked": "2026-10-16"
+      },
+      "land": {
+        "acres": 2.3,
+        "wooded": "partially",
+        "roadAccess": "uncertain",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "unknown",
+        "floodRisk": "unknown",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": false,
+        "type": "none",
+        "condition": "none"
+      },
+      "utilities": {
+        "overall": "none",
+        "power": "available",
+        "water": "none",
+        "septic": "none"
+      },
+      "restrictions": {
+        "hoa": "unknown",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "A-1 (advertised)"
+      },
+      "affordability": {
+        "fit": "unknown",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "Price from prior listing discovery only. Financing, property taxes, insurance, infrastructure costs and actual retirement carrying cost not assessed."
+      },
+      "legalUse": {
+        "residentialPath": "unknown",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "unknown",
+        "workshopPotential": "unknown",
+        "solarPotential": "unknown",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "unknown",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "existing-utilities",
+          "legal-rv-occupancy"
+        ],
+        "exceptionReason": "Added for Becky to review at user's request. Full-time RV legality and suitability remain unconfirmed; listed price and acreage merit further screening.",
+        "exceptionalStrengths": [
+          "Listing advertised at $99,000 for 2.3 acres; status not independently rechecked on 2026-10-16",
+          "Listing describes A-1 zoning and manufactured homes as permitted",
+          "Listing advertises high-and-dry land and no HOA"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 30,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Listing advertised at $99,000 for 2.3 acres; status not independently rechecked on 2026-10-16",
+          "Listing describes A-1 zoning and manufactured homes as permitted",
+          "Listing advertises high-and-dry land and no HOA",
+          "Listing describes a public-maintained dirt road and nearby electricity"
+        ],
+        "unknowns": [
+          "Exact parcel address, boundary, and coordinates",
+          "Current listing status and asking price",
+          "Official flood zone, drainage and wetland survey",
+          "Whether full-time RV occupancy is permitted",
+          "Well and septic feasibility, permits and costs",
+          "Electric connection costs",
+          "Deed restrictions and any other private land-use restrictions",
+          "Road and turning access for a 40-foot RV",
+          "Distance by road from family"
+        ],
+        "notes": "Review with Becky: promising land shape and stated manufactured-home option; budget must cover creating well/septic from scratch. RV use not approved."
+      },
+      "links": {
+        "listing": "https://www.marinaparkrealty.com/property-search/detail/240/OM727908/0-sw-90th-st-dunnellon-fl-34432/",
+        "map": "https://www.openstreetmap.org/search?query=SW%2090th%20Street%20(parcel%20number%20unverified)%2C%20Dunnellon%2C%20FL",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-010",
+      "name": "NE 136th Avenue Tract",
+      "nickname": "The Wooded Williston Three Acres",
+      "location": {
+        "address": "NE 136th Avenue (parcel number unverified)",
+        "city": "Williston",
+        "state": "FL",
+        "county": "Levy",
+        "latitude": 29.39,
+        "longitude": -82.45,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "unknown",
+        "price": 85000,
+        "previousPrice": null,
+        "dateAdded": "2026-10-16",
+        "dateChecked": "2026-10-16"
+      },
+      "land": {
+        "acres": 3.04,
+        "wooded": "heavily",
+        "roadAccess": "uncertain",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "unknown",
+        "floodRisk": "unknown",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": false,
+        "type": "none",
+        "condition": "none"
+      },
+      "utilities": {
+        "overall": "none",
+        "power": "unknown",
+        "water": "none",
+        "septic": "none"
+      },
+      "restrictions": {
+        "hoa": "unknown",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "unknown"
+      },
+      "affordability": {
+        "fit": "unknown",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "Price from prior listing discovery only. Financing, property taxes, insurance, infrastructure costs and actual retirement carrying cost not assessed."
+      },
+      "legalUse": {
+        "residentialPath": "unknown",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "unknown",
+        "workshopPotential": "unknown",
+        "solarPotential": "unknown",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "unknown",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "existing-utilities",
+          "legal-rv-occupancy"
+        ],
+        "exceptionReason": "Added for Becky to review at user's request. Full-time RV legality and suitability remain unconfirmed; listed price and acreage merit further screening.",
+        "exceptionalStrengths": [
+          "Listing advertised at $85,000 for 3.04 acres; status not independently rechecked on 2026-10-16",
+          "Listing describes wooded vacant acreage, without existing improvements",
+          "Listing advertises no HOA and no deed restrictions"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 30,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Listing advertised at $85,000 for 3.04 acres; status not independently rechecked on 2026-10-16",
+          "Listing describes wooded vacant acreage, without existing improvements",
+          "Listing advertises no HOA and no deed restrictions"
+        ],
+        "unknowns": [
+          "Current listing status and price",
+          "County confirmation of parcel zoning and year-round RV occupancy",
+          "Exact parcel coordinates, boundaries and legal road access",
+          "Well and septic feasibility and total installation costs",
+          "Flood zone, wetland boundaries and actual dry buildable acreage",
+          "Electric-service availability and connection cost",
+          "Verified lack of deed restrictions",
+          "Practical long-term family driving distance",
+          "40-foot RV access and usable clearing area"
+        ],
+        "notes": "Review with Becky: wooded privacy potential at low entry price, but unimproved; Levy County RV-living enforcement makes this a zoning-first candidate."
+      },
+      "links": {
+        "listing": "https://www.landsearch.com/properties/ne-136th-ave-williston-fl-32696/5511552",
+        "map": "https://www.openstreetmap.org/search?query=NE%20136th%20Avenue%20(parcel%20number%20unverified)%2C%20Williston%2C%20FL",
         "countyGis": null
       }
     }
