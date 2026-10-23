@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.12.0",
+    "version": "0.13.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-10-16",
+    "updated": "2026-10-23",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -1244,6 +1244,131 @@
       "links": {
         "listing": "https://www.landsearch.com/properties/ne-136th-ave-williston-fl-32696/5511552",
         "map": "https://www.openstreetmap.org/search?query=NE%20136th%20Avenue%20(parcel%20number%20unverified)%2C%20Williston%2C%20FL",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-011",
+      "name": "6106 Desales Street",
+      "nickname": "The Local Rehab Homestead",
+      "location": {
+        "address": "6106 Desales Street",
+        "city": "Brooksville",
+        "state": "FL",
+        "county": "Hernando",
+        "latitude": 28.506,
+        "longitude": -82.474,
+        "setting": "semi-rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "approximate"
+      },
+      "listing": {
+        "status": "active",
+        "price": 149900,
+        "previousPrice": 165000,
+        "dateAdded": "2026-10-23",
+        "dateChecked": "2026-10-23"
+      },
+      "land": {
+        "acres": 2.4,
+        "wooded": "partially",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "unknown",
+        "usableSpace": "adequate",
+        "floodRisk": "low",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "major-rehab"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "AR2"
+      },
+      "affordability": {
+        "fit": "tight",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "Asking price is at the current ceiling. Cash-to-close, insurance, rehabilitation exposure, taxes and financing terms remain unverified; advertised terms are Cash or Other with no confirmed owner financing."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "existing",
+        "solarPotential": "good",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "unknown",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "unknown",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "affordability",
+          "legal-rv-occupancy"
+        ],
+        "exceptionReason": "At the $150,000 ceiling with no verified acquisition solution or full-time RV approval, but the local 2.4-acre AR2 parcel, legal residential footprint, existing utilities, no HOA and useful outbuildings make it a serious candidate.",
+        "exceptionalStrengths": [
+          "2.4 acres in Brooksville with no HOA and AR2 zoning",
+          "Existing manufactured home, connected electricity, well and septic",
+          "Two sheds, cleared usable ground and a much better New Port Richey commute"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 78,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active Stellar MLS listing W7887839 at $149,900 checked on 2026-10-23",
+          "2.4-acre AR2 parcel with no HOA advertised",
+          "1982 double-wide with 1,568 square feet and a metal roof",
+          "Well with a recently replaced pump, septic and connected electricity are advertised",
+          "Two sheds and substantial cleared area are advertised",
+          "FEMA Zone X is reported by current listing sources",
+          "Property is being sold as-is and priced primarily for the land and existing infrastructure"
+        ],
+        "unknowns": [
+          "Whether the manufactured home is legally habitable, condemned, or subject to an open demolition order",
+          "Open Hernando County code-enforcement cases, permits, liens and unsafe-structure findings",
+          "Interior condition because the seller does not permit interior showings",
+          "Whether the septic system is operational, correctly sized and legally reusable rather than merely present",
+          "Current well-water quality, flow and permit status",
+          "Insurance eligibility and true rehabilitation or removal cost",
+          "Whether full-time occupancy of Grace is allowed before, during or instead of rehabilitating the dwelling",
+          "Driveway width, overhead clearance, bearing capacity and turning room for a 40-foot, 26,000-pound RV",
+          "Owner financing, assumable debt, delayed closing or other workable acquisition terms",
+          "Deed restrictions, outdoor-storage rules, visible-neighbor screening and gate placement",
+          "Internet service, evacuation access, wetland boundaries and survey accuracy"
+        ],
+        "notes": "Top local lead. Do not spend inspection or closing money until county records confirm there is no condemnation or demolition order and the existing residential and utility footprint can legally support the Grace plan."
+      },
+      "links": {
+        "listing": "https://www.zillow.com/homedetails/6106-Desales-St-Brooksville-FL-34604/44788302_zpid/",
+        "map": "https://www.openstreetmap.org/search?query=6106%20Desales%20Street%2C%20Brooksville%2C%20FL%2034604",
         "countyGis": null
       }
     }

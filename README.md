@@ -38,7 +38,7 @@ This is not a real-estate listing service. It answers one practical question:
 
 ## Current status
 
-Version `0.12.0` renders researched candidates directly from the JSON database,
+Version `0.13.0` renders researched candidates directly from the JSON database,
 including independent scores, confirmed facts, unknowns, red flags, direct
 listing links, a persistent Leaflet map, the move sequence, and explicit fit and
 rejection criteria. The live Match count is intentionally allowed to be zero.

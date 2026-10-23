@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented here.
 
+## [0.13.0] - 2026-10-23
+
+### Added
+
+- 6106 Desales Street in Brooksville as a serious local rehab-homestead candidate
+- Explicit county-code, condemnation, septic-operation, interior-condition, RV-occupancy and acquisition-term checks for the property
+
 ## [0.12.0] - 2026-09-13
 
 ### Added
