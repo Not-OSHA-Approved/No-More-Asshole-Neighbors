@@ -2,7 +2,7 @@
 
 ## Current version
 
-`0.13.0`
+`0.14.0`
 
 ## Current milestone
 
@@ -32,6 +32,7 @@ buy-prep-move-sell mission.
 - Old Town fiber and workshop candidate: 626 NE 816th Avenue
 - Old Town wooded short-sale candidate: 65 SE 153rd Avenue
 - Brooksville local rehab candidate: 6106 Desales Street
+- Brooksville complete-setup candidate: 11189 Salome Street
 - Transition affordability is evaluated separately from the stabilized retirement-payment target
 - Explicit separation of advertised and verified owner-financing terms
 - Recorded condition, price-history, access, utility, and legal-use unknowns

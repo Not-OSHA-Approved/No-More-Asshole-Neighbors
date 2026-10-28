@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.13.0",
+    "version": "0.14.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-10-23",
+    "updated": "2026-10-28",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -1369,6 +1369,133 @@
       "links": {
         "listing": "https://www.zillow.com/homedetails/6106-Desales-St-Brooksville-FL-34604/44788302_zpid/",
         "map": "https://www.openstreetmap.org/search?query=6106%20Desales%20Street%2C%20Brooksville%2C%20FL%2034604",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-012",
+      "name": "11189 Salome Street",
+      "nickname": "The Almost-Everything Homestead",
+      "location": {
+        "address": "11189 Salome Street",
+        "city": "Brooksville",
+        "state": "FL",
+        "county": "Hernando",
+        "latitude": 28.58948,
+        "longitude": -82.498465,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "address"
+      },
+      "listing": {
+        "status": "active",
+        "price": 249999,
+        "previousPrice": 275000,
+        "dateAdded": "2026-10-28",
+        "dateChecked": "2026-10-28"
+      },
+      "land": {
+        "acres": 2.7,
+        "wooded": "partially",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "likely",
+        "usableSpace": "excellent",
+        "floodRisk": "low",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "repairable"
+      },
+      "utilities": {
+        "overall": "existing",
+        "power": "connected",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "AG"
+      },
+      "affordability": {
+        "fit": "unaffordable",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "The $249,999 asking price is far above the current target. Owner financing is advertised for qualified buyers, but down payment, interest rate, amortization, balloon, prepayment terms, taxes after sale and insurance remain unknown."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "moderate",
+        "gatePotential": "excellent",
+        "workshopPotential": "existing",
+        "solarPotential": "excellent",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "possible",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "available",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "affordability"
+        ],
+        "exceptionReason": "The asking price is well above target and full-time RV occupancy is unverified, but this is an unusually complete setup with a legal residential footprint, existing utilities, a new permitted septic system, RV hookup, fencing, powered workshop, barns, carport and advertised owner financing.",
+        "exceptionalStrengths": [
+          "2.7 AG-zoned acres across two parcels, fully fenced and without an HOA",
+          "Connected electricity, private well and a permitted 2025 septic system sized for four bedrooms",
+          "Existing 30-amp RV hookup, powered workshop, seven-stall powered horse barn and four-bay powered carport",
+          "Owner financing advertised for qualified buyers"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 84,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active Stellar MLS listing TB8534333 at $249,999 checked on 2026-10-28",
+          "2.7 acres across two advertised parcels with AG zoning and no HOA",
+          "Fully fenced property with a new entrance gate",
+          "2018 Champion one-bedroom trailer with connected electricity and private well",
+          "Permitted septic system and drain field installed in 2025 and advertised as sized for four bedrooms",
+          "Existing 30-amp RV hookup",
+          "Large workshop or barn with electricity and water; listing says the workshop tools convey",
+          "Seven-stall horse barn with electricity and water plus a four-bay powered carport",
+          "FEMA Zone X reported by current listing sources",
+          "Owner financing advertised for qualified buyers"
+        ],
+        "unknowns": [
+          "Owner-financing down payment, interest rate, amortization, balloon, prepayment and closing terms",
+          "Whether the trailer title, age, permits and legal occupancy status match the listing description",
+          "Whether Hernando County allows Grace to be occupied full-time at the existing RV hookup",
+          "Well-water quality, flow, equipment condition and permit history",
+          "Septic inspection results, permit closeout and exact connection capacity",
+          "Survey confirmation that both advertised parcels convey and provide the expected usable dimensions",
+          "Extent and practical effect of the advertised conservation area",
+          "Driveway clearance, turning room, bearing capacity and hookup placement for a 40-foot, 26,000-pound RV",
+          "Visibility from the road and neighboring homes at the intended Grace parking location",
+          "Insurance eligibility, post-sale taxes, deed restrictions, outdoor-storage rules and internet service"
+        ],
+        "notes": "Top complete-setup lead despite the price. Get written owner-financing terms and county confirmation of Grace's full-time occupancy before spending money on inspections or treating the existing RV hookup as approval to live there."
+      },
+      "links": {
+        "listing": "https://www.raveis.com/prop/TB8534333/11189-salome-street-brooksville-fl-34614",
+        "map": "https://www.openstreetmap.org/?mlat=28.58948&mlon=-82.498465#map=17/28.58948/-82.498465",
         "countyGis": null
       }
     }

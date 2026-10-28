@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented here.
 
+## [0.14.0] - 2026-10-28
+
+### Added
+
+- 11189 Salome Street in Brooksville as a complete-setup candidate with owner-financing potential
+- Explicit financing-term, RV-occupancy, trailer-status, survey, well, septic, conservation-area and RV-access checks for the property
+
 ## [0.13.0] - 2026-10-23
 
 ### Added
