@@ -2,7 +2,7 @@
 
 ## Current version
 
-`0.16.0`
+`0.17.0`
 
 ## Current milestone
 
@@ -26,7 +26,6 @@ buy-prep-move-sell mission.
 - Independent 100-point Acquisition Feasibility score
 - Hard vetoes for access, affordability, title, legal occupancy, and evacuation
 - Automated scoring regression tests
-- First researched candidate: 8608 Hamster Drive
 - Brooksville local rehab candidate: 6106 Desales Street
 - Brooksville complete-setup candidate: 11189 Salome Street
 - Brooksville fenced project candidate: 16115 Peach Orchard Road

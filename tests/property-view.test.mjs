@@ -19,22 +19,22 @@ assert.equal(escapeHtml('<script>alert("x")</script>'), "&lt;script&gt;alert(&qu
 assert.equal(formatMoney(150000), "$150,000");
 assert.equal(formatMoney(null), "Unknown");
 assert.equal(view.statusLabel, "Maybe");
-assert.equal(view.retirementScore, 29);
-assert.equal(view.acquisitionScore, 32);
+assert.equal(view.retirementScore, 38);
+assert.equal(view.acquisitionScore, 6);
 
 const queue = renderQueueItem(property, true);
-assert.match(queue, /8608 Hamster Drive/);
+assert.match(queue, /6106 Desales Street/);
 assert.match(queue, /aria-pressed="true"/);
-assert.match(queue, /Retirement <b>29<\/b>/);
-assert.match(queue, /Acquisition <b>32<\/b>/);
+assert.match(queue, /Retirement <b>38<\/b>/);
+assert.match(queue, /Acquisition <b>6<\/b>/);
 
 const detail = renderPropertyDetail(property);
 assert.match(detail, /Unknowns &amp; red flags/);
 assert.match(detail, /Open current listing/);
-assert.match(detail, /reported \$20,000 sale/);
+assert.match(detail, /FEMA Zone X/);
 
 const acquisition = renderAcquisitionPanel(property);
-assert.match(acquisition, /32\/100 acquisition/);
+assert.match(acquisition, /6\/100 acquisition/);
 assert.match(acquisition, /None verified/);
 
 console.log("Validated candidate queue and property detail rendering.");

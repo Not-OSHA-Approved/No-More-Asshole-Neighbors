@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented here.
 
+## [0.17.0] - 2026-10-29
+
+### Removed
+
+- All remaining non-Brooksville candidates after Becky's area review
+- Non-Brooksville-specific validation and current-status entries
+
 ## [0.16.0] - 2026-10-29
 
 ### Removed
