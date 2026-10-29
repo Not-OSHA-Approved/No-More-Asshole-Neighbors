@@ -1,10 +1,10 @@
 {
   "metadata": {
     "project": "No More Asshole Neighbors",
-    "version": "0.14.0",
+    "version": "0.15.0",
     "schemaVersion": "1.1.0",
     "schema": "property.schema.json",
-    "updated": "2026-10-28",
+    "updated": "2026-10-29",
     "description": "Rural retirement property candidates for Chris and Becky"
   },
   "properties": [
@@ -1496,6 +1496,132 @@
       "links": {
         "listing": "https://www.raveis.com/prop/TB8534333/11189-salome-street-brooksville-fl-34614",
         "map": "https://www.openstreetmap.org/?mlat=28.58948&mlon=-82.498465#map=17/28.58948/-82.498465",
+        "countyGis": null
+      }
+    },
+    {
+      "id": "NMAN-013",
+      "name": "16115 Peach Orchard Road",
+      "nickname": "The Fenced Do-What-You-Want Project",
+      "location": {
+        "address": "16115 Peach Orchard Road",
+        "city": "Brooksville",
+        "state": "FL",
+        "county": "Hernando",
+        "latitude": 28.5927,
+        "longitude": -82.4638,
+        "setting": "rural",
+        "region": "west-coast-florida",
+        "coordinateAccuracy": "address"
+      },
+      "listing": {
+        "status": "active",
+        "price": 184500,
+        "previousPrice": null,
+        "dateAdded": "2026-10-29",
+        "dateChecked": "2026-10-29"
+      },
+      "land": {
+        "acres": 2.3,
+        "wooded": "cleared",
+        "roadAccess": "legal-paved",
+        "rvAccess": "unknown",
+        "evacuationAccess": "likely",
+        "usableSpace": "adequate",
+        "floodRisk": "unknown",
+        "wetlands": "unknown"
+      },
+      "dwelling": {
+        "exists": true,
+        "type": "mobile-home",
+        "condition": "major-rehab"
+      },
+      "utilities": {
+        "overall": "partial",
+        "power": "unknown",
+        "water": "well",
+        "septic": "installed"
+      },
+      "restrictions": {
+        "hoa": "none",
+        "deedRestrictions": "unknown",
+        "outdoorStorage": "unknown",
+        "zoning": "AG"
+      },
+      "affordability": {
+        "fit": "unaffordable",
+        "estimatedMonthlyHousingCost": null,
+        "calculationStatus": "not-calculated",
+        "notes": "The $184,500 asking price exceeds the current ceiling. One current broker page advertises owner financing while Zillow lists Cash, so no acquisition solution exists until the seller provides written terms. Taxes, insurance, demolition or rebuilding costs and utility repairs remain unknown."
+      },
+      "legalUse": {
+        "residentialPath": "existing-dwelling",
+        "fullTimeRvOccupancy": "unknown"
+      },
+      "lifestyle": {
+        "visibleNeighbors": "unknown",
+        "driveway": "unknown",
+        "gatePotential": "possible",
+        "workshopPotential": "possible",
+        "solarPotential": "excellent",
+        "waterAccessMiles": null,
+        "internet": "unknown"
+      },
+      "acquisition": {
+        "overlapSolution": "possible",
+        "upfrontCashRequired": null,
+        "ownerFinancing": "negotiable",
+        "monthlyPayment": null,
+        "balloonYears": null,
+        "prepaymentPenalty": "unknown",
+        "closingFlexibility": "unknown"
+      },
+      "qualification": {
+        "status": "exception",
+        "missedRequirements": [
+          "affordability"
+        ],
+        "exceptionReason": "The asking price is above target, power and flood status are unknown, and the partially demolished mobile home could hide a code or condemnation mess. It remains worth tracking because the local AG-zoned acreage has no HOA, privacy fencing, well, septic, paid impact fees, sheds and possible owner financing.",
+        "exceptionalStrengths": [
+          "2.3 cleared AG-zoned acres in a familiar rural Brooksville area with no HOA",
+          "Existing well, septic system and reportedly paid impact fees",
+          "Fenced and privacy-fenced features plus existing sheds",
+          "Current broker page advertises owner financing"
+        ],
+        "rejectionReasons": []
+      },
+      "research": {
+        "stage": "researching",
+        "confidence": 72,
+        "titleStatus": "unknown",
+        "confirmed": [
+          "Active Hernando County MLS listing 2261341 at $184,500 checked on 2026-10-29",
+          "2.3 cleared acres with AG zoning and no HOA advertised",
+          "Existing well, septic system and paid impact fees advertised",
+          "Older mobile home remains in place with its interior partially demolished",
+          "Listing reports fencing and privacy fencing, while its description calls the fencing partial",
+          "Existing sheds and other structures advertised",
+          "Asphalt county-road frontage advertised",
+          "Broker page says owner financing is available; Zillow currently lists Cash"
+        ],
+        "unknowns": [
+          "Written confirmation that owner financing is actually offered and its down payment, rate, amortization, balloon, prepayment and closing terms",
+          "Whether the mobile home is legally habitable or rebuildable, condemned, or subject to an unsafe-structure or demolition order",
+          "Open Hernando County code-enforcement cases, permits, liens and demolition requirements",
+          "Whether the existing mobile-home footprint, paid impact fees and utility connections remain legally reusable",
+          "Electrical-service presence, meter status, reconnection requirements and repair cost",
+          "Well-water quality, flow, equipment condition and permit history",
+          "Septic condition, capacity, permit status and legal reuse",
+          "FEMA flood zone, wetlands and actual high-and-dry usable acreage",
+          "Whether Hernando County allows Grace to be occupied full-time during demolition, rebuilding or instead of the mobile home",
+          "Driveway clearance, turning room, bearing capacity and parking layout for a 40-foot, 26,000-pound RV",
+          "Exact fence coverage, gate condition, survey boundaries, deed restrictions, outdoor-storage rules and internet service"
+        ],
+        "notes": "Serious local project candidate because the fenced AG acreage, well, septic, paid impact fees and neighborhood culture fit the mission. Do not spend inspection or closing money until written financing terms and county records confirm there is no condemnation, demolition order, code lien or blocked utility reuse."
+      },
+      "links": {
+        "listing": "https://www.alliancegroupfl.com/property/320-2261341-16115-peach-orchard-road-brooksville-FL-34614",
+        "map": "https://www.openstreetmap.org/?mlat=28.5927&mlon=-82.4638#map=17/28.5927/-82.4638",
         "countyGis": null
       }
     }

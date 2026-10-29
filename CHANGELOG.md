@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented here.
 
+## [0.15.0] - 2026-10-29
+
+### Added
+
+- 16115 Peach Orchard Road in Brooksville as a fenced local project candidate
+- Explicit financing-conflict, condemnation, code-enforcement, utility-reuse, flood and RV-occupancy checks for the property
+
 ## [0.14.0] - 2026-10-28
 
 ### Added

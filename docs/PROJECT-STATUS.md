@@ -2,7 +2,7 @@
 
 ## Current version
 
-`0.14.0`
+`0.15.0`
 
 ## Current milestone
 
@@ -33,6 +33,7 @@ buy-prep-move-sell mission.
 - Old Town wooded short-sale candidate: 65 SE 153rd Avenue
 - Brooksville local rehab candidate: 6106 Desales Street
 - Brooksville complete-setup candidate: 11189 Salome Street
+- Brooksville fenced project candidate: 16115 Peach Orchard Road
 - Transition affordability is evaluated separately from the stabilized retirement-payment target
 - Explicit separation of advertised and verified owner-financing terms
 - Recorded condition, price-history, access, utility, and legal-use unknowns
