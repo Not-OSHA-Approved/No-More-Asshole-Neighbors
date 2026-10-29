@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented here.
 
+## [0.16.0] - 2026-10-29
+
+### Removed
+
+- All five Old Town candidates after Becky rejected the area
+- Old Town-specific validation and current-status entries
+
 ## [0.15.0] - 2026-10-29
 
 ### Added

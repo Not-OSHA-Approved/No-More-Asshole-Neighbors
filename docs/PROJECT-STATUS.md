@@ -2,7 +2,7 @@
 
 ## Current version
 
-`0.15.0`
+`0.16.0`
 
 ## Current milestone
 
@@ -27,10 +27,6 @@ buy-prep-move-sell mission.
 - Hard vetoes for access, affordability, title, legal occupancy, and evacuation
 - Automated scoring regression tests
 - First researched candidate: 8608 Hamster Drive
-- Old Town project candidate: 225 NE 544th Street
-- Old Town move-in candidate: 1668 NE 592nd Street
-- Old Town fiber and workshop candidate: 626 NE 816th Avenue
-- Old Town wooded short-sale candidate: 65 SE 153rd Avenue
 - Brooksville local rehab candidate: 6106 Desales Street
 - Brooksville complete-setup candidate: 11189 Salome Street
 - Brooksville fenced project candidate: 16115 Peach Orchard Road
