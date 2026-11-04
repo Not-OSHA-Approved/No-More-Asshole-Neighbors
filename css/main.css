@@ -405,12 +405,16 @@ blockquote {
   display: block;
   margin-top: 8px;
   color: var(--moss);
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.2;
 }
 
 .score-pair small {
+  display: block;
+  margin-top: 9px;
   color: var(--muted);
-  font-size: .75rem;
+  font-size: .72rem;
+  line-height: 1.45;
 }
 
 .decision-summary {
