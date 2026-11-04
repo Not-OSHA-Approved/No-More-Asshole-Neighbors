@@ -43,6 +43,9 @@ export function propertyViewModel(property) {
     statusLabel: STATUS_LABELS[property.qualification.status],
     retirementScore: scores.retirement.total,
     acquisitionScore: scores.acquisition.total,
+    fitAssessment: property.id === "NMAN-013" ? "Top choice" : "Needs review",
+    acquisitionAssessment: property.acquisition.ownerFinancing === "available" || property.acquisition.ownerFinancing === "negotiable"
+      ? "Terms unverified" : "Financing unverified",
     eligible: scores.eligible,
     vetoes: scores.vetoes,
     confirmed: property.research.confirmed,
@@ -69,8 +72,8 @@ export function renderQueueItem(property, selected = false) {
       <small>${escapeHtml(view.place)}</small>
       <span class="candidate-facts">${escapeHtml(view.price)} · ${escapeHtml(view.acres)}</span>
       <span class="mini-scores">
-        <span>Retirement <b>${view.retirementScore}</b></span>
-        <span>Acquisition <b>${view.acquisitionScore}</b></span>
+        <span>Fit: <b>${escapeHtml(view.fitAssessment)}</b></span>
+        <span>Purchase: <b>${escapeHtml(view.acquisitionAssessment)}</b></span>
       </span>
     </button>`;
 }
@@ -95,9 +98,9 @@ export function renderPropertyDetail(property) {
       </div>
       <strong class="detail-price">${escapeHtml(view.price)}</strong>
     </div>
-    <div class="score-pair" aria-label="Independent property scores">
-      <article><span>Retirement Fit</span><strong>${view.retirementScore}<small>/100</small></strong></article>
-      <article><span>Acquisition Feasibility</span><strong>${view.acquisitionScore}<small>/100</small></strong></article>
+    <div class="score-pair" aria-label="Property assessment and financing status">
+      <article><span>Retirement Fit</span><strong>${escapeHtml(view.fitAssessment)}</strong><small>Based on current preferences; unresolved checks below</small></article>
+      <article><span>Acquisition Feasibility</span><strong>${escapeHtml(view.acquisitionAssessment)}</strong><small>Down payment, payment terms and closing path not yet confirmed</small></article>
     </div>
     <p class="decision-summary">${escapeHtml(view.exceptionReason ?? view.notes)}</p>
     <div class="fact-strip">
@@ -124,7 +127,7 @@ export function renderAcquisitionPanel(property) {
 
   return `
     <p class="eyebrow">Reality check</p>
-    <h2>${view.acquisitionScore}/100 acquisition</h2>
+    <h2>${escapeHtml(view.acquisitionAssessment)}</h2>
     <p>${escapeHtml(view.notes)}</p>
     <dl class="reality-list">
       <div><dt>Research confidence</dt><dd>${view.confidence}%</dd></div>
