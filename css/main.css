@@ -730,3 +730,11 @@ footer strong {
     margin-top: 8px;
   }
 }
+
+/* Evidence checklists: counts are observable rather than opaque ratings. */
+.assessment-checks { margin: 12px 0 22px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 12px; }
+.assessment-checks summary { cursor: pointer; color: var(--moss); font-weight: 650; }
+.assessment-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; color: var(--muted); font-size: .82rem; }
+.assessment-lists h3 { color: var(--text); font-size: 1rem; }
+.assessment-lists ul { padding-left: 20px; line-height: 1.7; }
+@media (max-width: 720px) { .assessment-lists { grid-template-columns: 1fr; } }
