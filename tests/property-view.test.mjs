@@ -19,23 +19,24 @@ assert.equal(escapeHtml('<script>alert("x")</script>'), "&lt;script&gt;alert(&qu
 assert.equal(formatMoney(150000), "$150,000");
 assert.equal(formatMoney(null), "Unknown");
 assert.equal(view.statusLabel, "Maybe");
-assert.equal(view.retirementScore, 38);
-assert.equal(view.acquisitionScore, 6);
+assert.equal(view.fitAssessment, "Top choice");
+assert.equal(view.acquisitionAssessment, "Terms unverified");
 
 const queue = renderQueueItem(property, true);
-assert.match(queue, /6106 Desales Street/);
+assert.match(queue, /16115 Peach Orchard Road/);
 assert.match(queue, /aria-pressed="true"/);
-assert.match(queue, /Retirement <b>38<\/b>/);
-assert.match(queue, /Acquisition <b>6<\/b>/);
+assert.match(queue, /Fit: <b>Top choice<\/b>/);
+assert.match(queue, /Purchase: <b>Terms unverified<\/b>/);
 
 const detail = renderPropertyDetail(property);
 assert.match(detail, /Unknowns &amp; red flags/);
 assert.match(detail, /Open current listing/);
-assert.match(detail, /FEMA Zone X/);
+assert.match(detail, /INVALID FLOOD ZONE CODE/);
+assert.doesNotMatch(detail, /27<small>\/100/);
 
 const acquisition = renderAcquisitionPanel(property);
-assert.match(acquisition, /6\/100 acquisition/);
+assert.match(acquisition, /Terms unverified/);
 assert.match(acquisition, /None verified/);
 
 console.log("Validated candidate queue and property detail rendering.");
-console.log("Confirmed HTML escaping, independent scores, and visible research unknowns.");
+console.log("Confirmed HTML escaping, visible status assessments, and visible research unknowns.");
