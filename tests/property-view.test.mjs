@@ -18,7 +18,7 @@ const view = propertyViewModel(property);
 assert.equal(escapeHtml('<script>alert("x")</script>'), "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;");
 assert.equal(formatMoney(150000), "$150,000");
 assert.equal(formatMoney(null), "Unknown");
-assert.equal(view.statusLabel, "Maybe");
+assert.equal(view.statusLabel, "Priority #1");
 assert.equal(view.fitAssessment, "Top choice");
 assert.equal(view.acquisitionAssessment, "Terms unverified");
 
