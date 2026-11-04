@@ -26,7 +26,7 @@ const queue = renderQueueItem(property, true);
 assert.match(queue, /16115 Peach Orchard Road/);
 assert.match(queue, /aria-pressed="true"/);
 assert.match(queue, /Fit: <b>8\/12 matched<\/b>/);
-assert.match(queue, /Financing: <b>0\/5 verified<\/b>/);
+assert.match(queue, /Evidence: <b>48\/100<\/b>/);
 
 const detail = renderPropertyDetail(property);
 assert.match(detail, /Unknowns &amp; red flags/);
@@ -36,6 +36,9 @@ assert.match(detail, /How these numbers are calculated/);
 assert.equal(view.checks.fit.met, 8);
 assert.equal(view.checks.fit.open, 4);
 assert.equal(view.checks.financing.met, 0);
+assert.equal(view.checks.fit.maturity, 48);
+assert.equal(view.checks.fit.quality, 73);
+assert.match(detail, /Evidence Maturity/);
 assert.doesNotMatch(detail, /27<small>\/100/);
 
 const acquisition = renderAcquisitionPanel(property);
