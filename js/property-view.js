@@ -33,20 +33,32 @@ export function formatMoney(value) {
 function evaluateChecks(property) {
   const isKnown = v => v !== null && v !== undefined && v !== "unknown";
   const checks = [
-    ["Brooksville location", isKnown(property.location.city), property.location.city.toLowerCase() === "brooksville"],
-    ["At least 2 acres", typeof property.land.acres === "number", property.land.acres >= 2],
-    ["No HOA", isKnown(property.restrictions.hoa), property.restrictions.hoa === "none"],
-    ["Agricultural/rural zoning", isKnown(property.restrictions.zoning), ["AG", "AR2"].includes(property.restrictions.zoning)],
-    ["Existing residential structure", isKnown(property.legalUse.residentialPath), property.legalUse.residentialPath === "existing-dwelling"],
-    ["Well on property", isKnown(property.utilities.water), property.utilities.water === "well"],
-    ["Septic installed", isKnown(property.utilities.septic), property.utilities.septic === "installed"],
-    ["Solar potential rated good or better", isKnown(property.lifestyle.solarPotential), ["good", "excellent"].includes(property.lifestyle.solarPotential)],
-    ["Privacy from neighbors verified", isKnown(property.lifestyle.visibleNeighbors), ["none", "few"].includes(property.lifestyle.visibleNeighbors)],
-    ["Full-time RV occupancy authorized", isKnown(property.legalUse.fullTimeRvOccupancy), property.legalUse.fullTimeRvOccupancy === "allowed"],
-    ["Flood risk verified low", isKnown(property.land.floodRisk), property.land.floodRisk === "low"],
-    ["Electricity connected", isKnown(property.utilities.power), property.utilities.power === "connected"]
+    ["location", "Brooksville location", isKnown(property.location.city), property.location.city.toLowerCase() === "brooksville"],
+    ["acreage", "At least 2 acres", typeof property.land.acres === "number", property.land.acres >= 2],
+    ["hoa", "No HOA", isKnown(property.restrictions.hoa), property.restrictions.hoa === "none"],
+    ["zoning", "Agricultural/rural zoning", isKnown(property.restrictions.zoning), ["AG", "AR2"].includes(property.restrictions.zoning)],
+    ["residential", "Existing residential structure", isKnown(property.legalUse.residentialPath), property.legalUse.residentialPath === "existing-dwelling"],
+    ["well", "Well on property", isKnown(property.utilities.water), property.utilities.water === "well"],
+    ["septic", "Septic installed", isKnown(property.utilities.septic), property.utilities.septic === "installed"],
+    ["solar", "Solar potential rated good or better", isKnown(property.lifestyle.solarPotential), ["good", "excellent"].includes(property.lifestyle.solarPotential)],
+    ["privacy", "Privacy from neighbors verified", isKnown(property.lifestyle.visibleNeighbors), ["none", "few"].includes(property.lifestyle.visibleNeighbors)],
+    ["rv", "Full-time RV occupancy authorized", isKnown(property.legalUse.fullTimeRvOccupancy), property.legalUse.fullTimeRvOccupancy === "allowed"],
+    ["flood", "Flood risk verified low", isKnown(property.land.floodRisk), property.land.floodRisk === "low"],
+    ["electric", "Electricity connected", isKnown(property.utilities.power), property.utilities.power === "connected"]
   ];
-  const fit = { met: checks.filter(c => c[1] && c[2]).length, total: checks.length, open: checks.filter(c => !c[1]).length, unmet: checks.filter(c => c[1] && !c[2]).length };
+  const evidenceWeights = { "county-record": 1, observed: .8, listing: .6, assessment: .4 };
+  const evidenceSources = property.research.evidenceSources ?? {};
+  const known = checks.filter(c => c[2]);
+  const evidencePoints = known.reduce((sum, [key]) => sum + (evidenceWeights[evidenceSources[key]] ?? 0), 0);
+  const fit = {
+    met: checks.filter(c => c[2] && c[3]).length,
+    total: checks.length,
+    open: checks.filter(c => !c[2]).length,
+    unmet: checks.filter(c => c[2] && !c[3]).length,
+    known: known.length,
+    maturity: Math.round(100 * evidencePoints / checks.length),
+    quality: known.length ? Math.round(100 * evidencePoints / known.length) : 0
+  };
   const acquisition = property.acquisition;
   const financing = [
     ["Down payment confirmed", acquisition.upfrontCashRequired !== null],
@@ -57,7 +69,10 @@ function evaluateChecks(property) {
   ];
   return {
     fit, financing: { met: financing.filter(x => x[1]).length, total: financing.length },
-    fitChecks: checks.map(([label, known, pass]) => ({ label, status: !known ? "Open" : pass ? "Met" : "Not met" })),
+    fitChecks: checks.map(([key, label, known, pass]) => ({
+      label, status: !known ? "Open" : pass ? "Met" : "Not met",
+      evidence: known ? (evidenceSources[key] ?? "source unclassified").replaceAll("-", " ") : "not established"
+    })),
     financingChecks: financing.map(([label, met]) => ({ label, status: met ? "Verified" : "Open" }))
   };
 }
@@ -108,7 +123,7 @@ export function renderQueueItem(property, selected = false) {
       <span class="candidate-facts">${escapeHtml(view.price)} · ${escapeHtml(view.acres)}</span>
       <span class="mini-scores">
         <span>Fit: <b>${view.checks.fit.met}/${view.checks.fit.total} matched</b></span>
-        <span>Financing: <b>${view.checks.financing.met}/${view.checks.financing.total} verified</b></span>
+        <span>Evidence: <b>${view.checks.fit.maturity}/100</b></span>
       </span>
     </button>`;
 }
@@ -134,11 +149,12 @@ export function renderPropertyDetail(property) {
       <strong class="detail-price">${escapeHtml(view.price)}</strong>
     </div>
     <div class="score-pair" aria-label="Property assessment and financing status">
-      <article><span>Retirement Fit Checks</span><strong>${view.checks.fit.met}<small> / ${view.checks.fit.total} met</small></strong><small>${view.checks.fit.open} open · ${view.checks.fit.unmet} not met. Counts include advertised features and assessments, not independent verification.</small></article>
-      <article><span>Financing Terms Verified</span><strong>${view.checks.financing.met}<small> / ${view.checks.financing.total}</small></strong><small>A seller-financing advertisement is not a confirmed financing agreement.</small></article>
+      <article><span>Retirement Fit</span><strong>${view.checks.fit.met}<small> / ${view.checks.fit.total} matched</small></strong><small>${view.checks.fit.open} open · ${view.checks.fit.unmet} not met. Fit includes listing claims and observed assessments.</small></article>
+      <article><span>Evidence Maturity</span><strong>${view.checks.fit.maturity}<small> / 100</small></strong><small>${view.checks.fit.known}/${view.checks.fit.total} assessed · ${view.checks.fit.quality}% average source strength for known items. Unknowns receive zero credit.</small></article>
     </div>
+    <p class="financing-snapshot">Financing: <strong>${view.checks.financing.met}/${view.checks.financing.total} terms verified</strong> — payment target $1,000/month; actual seller terms unconfirmed.</p>
     <p class="decision-summary">${escapeHtml(view.exceptionReason ?? view.notes)}</p>
-    <details class="assessment-checks"><summary>How these numbers are calculated</summary><div class="assessment-lists"><div><h3>Retirement fit</h3><ul>${view.checks.fitChecks.map(c => `<li>${escapeHtml(c.label)} — ${escapeHtml(c.status)}</li>`).join("")}</ul></div><div><h3>Financing</h3><ul>${view.checks.financingChecks.map(c => `<li>${escapeHtml(c.label)} — ${escapeHtml(c.status)}</li>`).join("")}</ul></div></div></details>
+    <details class="assessment-checks"><summary>How these numbers are calculated</summary><div class="assessment-lists"><div><h3>Retirement fit</h3><ul>${view.checks.fitChecks.map(c => `<li>${escapeHtml(c.label)} — ${escapeHtml(c.status)} (${escapeHtml(c.evidence)})</li>`).join("")}</ul></div><div><h3>Financing</h3><ul>${view.checks.financingChecks.map(c => `<li>${escapeHtml(c.label)} — ${escapeHtml(c.status)}</li>`).join("")}</ul></div></div></details>
     <div class="fact-strip">
       <span><small>Land</small>${escapeHtml(view.acres)}</span>
       <span><small>Dwelling</small>${escapeHtml(view.dwellingCondition)}</span>
@@ -166,7 +182,7 @@ export function renderAcquisitionPanel(property) {
     <h2>${view.checks.financing.met}/${view.checks.financing.total} financing terms verified</h2>
     <p>${escapeHtml(view.notes)}</p>
     <dl class="reality-list">
-      <div><dt>Research confidence</dt><dd>${view.confidence}%</dd></div>
+      <div><dt>Evidence maturity</dt><dd>${view.checks.fit.maturity}/100</dd></div>
       <div><dt>Owner financing</dt><dd>${escapeHtml(view.financing)}</dd></div>
       <div><dt>Hard veto</dt><dd>${view.eligible ? "None verified" : escapeHtml(view.vetoes.join(", "))}</dd></div>
     </dl>`;
