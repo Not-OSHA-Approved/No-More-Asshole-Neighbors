@@ -4,7 +4,7 @@ import {
   renderAcquisitionPanel,
   renderPropertyDetail,
   renderQueueItem
-} from "./property-view.js";
+} from "./property-view.js?v=0.17.1";
 
 const PROPERTY_DATA_URL = "data/properties.json";
 const DEFAULT_MAP_CENTER = [28.3, -82.2];
