@@ -131,7 +131,17 @@
           "Driveway clearance, turning room, bearing capacity and parking layout for a 40-foot, 26,000-pound RV",
           "Exact fence coverage, gate condition, survey boundaries, deed restrictions, outdoor-storage rules and internet service"
         ],
-        "notes": "PRIORITY #1 / PURCHASE TARGET: Chris and Becky drove by the property; Becky likes it and is ready to attempt a purchase after January 1, 2027 if it is still available. They accept the asking price as worth the premium. Daily monitoring requested for pending, under contract, sold, off-market, relisted, and asking-price changes. Do not spend inspection or closing money until written financing terms and county records confirm there is no condemnation, demolition order, code lien, or blocked utility reuse. 2026-11-04 DISCOVERIES: deed and parcel identity confirmed (OR 4556/166, instrument 2025031398); four historical permits FINALed (1987, 1994, 2013, 2016); flood field invalid; no documented lien/violation/demolition clearance yet. Next due diligence: title-company/attorney title examination, municipal lien and code enforcement search, current mobile-home safety, flood-map verification. Clerk's deed is a historical conveyance, not proof of current lien-free title."
+        "notes": "PRIORITY #1 / PURCHASE TARGET: Chris and Becky drove by the property; Becky likes it and is ready to attempt a purchase after January 1, 2027 if it is still available. They accept the asking price as worth the premium. Daily monitoring requested for pending, under contract, sold, off-market, relisted, and asking-price changes. Do not spend inspection or closing money until written financing terms and county records confirm there is no condemnation, demolition order, code lien, or blocked utility reuse. 2026-11-04 DISCOVERIES: deed and parcel identity confirmed (OR 4556/166, instrument 2025031398); four historical permits FINALed (1987, 1994, 2013, 2016); flood field invalid; no documented lien/violation/demolition clearance yet. Next due diligence: title-company/attorney title examination, municipal lien and code enforcement search, current mobile-home safety, flood-map verification. Clerk's deed is a historical conveyance, not proof of current lien-free title.",
+        "evidenceSources": {
+          "location": "county-record",
+          "acreage": "listing",
+          "hoa": "listing",
+          "zoning": "county-record",
+          "residential": "county-record",
+          "well": "listing",
+          "septic": "listing",
+          "solar": "assessment"
+        }
       },
       "links": {
         "listing": "https://www.alliancegroupfl.com/property/320-2261341-16115-peach-orchard-road-brooksville-FL-34614",
@@ -256,7 +266,19 @@
           "Deed restrictions, outdoor-storage rules, visible-neighbor screening and gate placement",
           "Internet service, evacuation access, wetland boundaries and survey accuracy"
         ],
-        "notes": "Top local lead. Do not spend inspection or closing money until county records confirm there is no condemnation or demolition order and the existing residential and utility footprint can legally support the Grace plan."
+        "notes": "Top local lead. Do not spend inspection or closing money until county records confirm there is no condemnation or demolition order and the existing residential and utility footprint can legally support the Grace plan.",
+        "evidenceSources": {
+          "location": "listing",
+          "acreage": "listing",
+          "hoa": "listing",
+          "zoning": "listing",
+          "residential": "listing",
+          "well": "listing",
+          "septic": "listing",
+          "solar": "assessment",
+          "flood": "listing",
+          "electric": "listing"
+        }
       },
       "links": {
         "listing": "https://www.zillow.com/homedetails/6106-Desales-St-Brooksville-FL-34604/44788302_zpid/",
@@ -383,7 +405,19 @@
           "Visibility from the road and neighboring homes at the intended Grace parking location",
           "Insurance eligibility, post-sale taxes, deed restrictions, outdoor-storage rules and internet service"
         ],
-        "notes": "Top complete-setup lead despite the price. Get written owner-financing terms and county confirmation of Grace's full-time occupancy before spending money on inspections or treating the existing RV hookup as approval to live there."
+        "notes": "Top complete-setup lead despite the price. Get written owner-financing terms and county confirmation of Grace's full-time occupancy before spending money on inspections or treating the existing RV hookup as approval to live there.",
+        "evidenceSources": {
+          "location": "listing",
+          "acreage": "listing",
+          "hoa": "listing",
+          "zoning": "listing",
+          "residential": "listing",
+          "well": "listing",
+          "septic": "listing",
+          "solar": "assessment",
+          "flood": "listing",
+          "electric": "listing"
+        }
       },
       "links": {
         "listing": "https://www.raveis.com/prop/TB8534333/11189-salome-street-brooksville-fl-34614",
