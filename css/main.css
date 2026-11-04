@@ -738,3 +738,6 @@ footer strong {
 .assessment-lists h3 { color: var(--text); font-size: 1rem; }
 .assessment-lists ul { padding-left: 20px; line-height: 1.7; }
 @media (max-width: 720px) { .assessment-lists { grid-template-columns: 1fr; } }
+
+.financing-snapshot { margin: 0 0 18px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); font-size: .84rem; }
+.financing-snapshot strong { color: var(--text); }
