@@ -4,179 +4,798 @@
   "title": "No More Asshole Neighbors Property",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "location", "listing", "land", "dwelling", "utilities", "restrictions", "affordability", "legalUse", "lifestyle", "acquisition", "qualification", "research", "links"],
+  "required": [
+    "id",
+    "name",
+    "location",
+    "listing",
+    "land",
+    "dwelling",
+    "utilities",
+    "restrictions",
+    "affordability",
+    "legalUse",
+    "lifestyle",
+    "acquisition",
+    "qualification",
+    "research",
+    "links"
+  ],
   "properties": {
-    "id": { "type": "string", "pattern": "^NMAN-[0-9]{3,}$" },
-    "name": { "type": "string", "minLength": 1 },
-    "nickname": { "type": ["string", "null"] },
+    "id": {
+      "type": "string",
+      "pattern": "^NMAN-[0-9]{3,}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nickname": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "location": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["address", "city", "state", "county", "latitude", "longitude", "setting", "region", "coordinateAccuracy"],
+      "required": [
+        "address",
+        "city",
+        "state",
+        "county",
+        "latitude",
+        "longitude",
+        "setting",
+        "region",
+        "coordinateAccuracy"
+      ],
       "properties": {
-        "address": { "type": "string" },
-        "city": { "type": "string", "minLength": 1 },
-        "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
-        "county": { "type": "string", "minLength": 1 },
-        "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
-        "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
-        "setting": { "enum": ["rural", "semi-rural", "suburban", "urban", "unknown"] },
-        "region": { "enum": ["west-coast-florida", "other-florida", "snow-country", "other", "unknown"] },
-        "coordinateAccuracy": { "enum": ["parcel", "address", "approximate", "unknown"] }
+        "address": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "county": {
+          "type": "string",
+          "minLength": 1
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "setting": {
+          "enum": [
+            "rural",
+            "semi-rural",
+            "suburban",
+            "urban",
+            "unknown"
+          ]
+        },
+        "region": {
+          "enum": [
+            "west-coast-florida",
+            "other-florida",
+            "snow-country",
+            "other",
+            "unknown"
+          ]
+        },
+        "coordinateAccuracy": {
+          "enum": [
+            "parcel",
+            "address",
+            "approximate",
+            "unknown"
+          ]
+        }
       }
     },
     "listing": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "price", "dateAdded", "dateChecked"],
+      "required": [
+        "status",
+        "price",
+        "dateAdded",
+        "dateChecked"
+      ],
       "properties": {
-        "status": { "enum": ["active", "pending", "sold", "off-market", "unknown"] },
-        "price": { "type": ["number", "null"], "minimum": 0 },
-        "previousPrice": { "type": ["number", "null"], "minimum": 0 },
-        "dateAdded": { "type": "string", "format": "date" },
-        "dateChecked": { "type": "string", "format": "date" }
+        "status": {
+          "enum": [
+            "active",
+            "pending",
+            "sold",
+            "off-market",
+            "unknown"
+          ]
+        },
+        "price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "previousPrice": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "dateAdded": {
+          "type": "string",
+          "format": "date"
+        },
+        "dateChecked": {
+          "type": "string",
+          "format": "date"
+        }
       }
     },
     "land": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["acres", "wooded", "roadAccess", "rvAccess", "evacuationAccess", "usableSpace", "floodRisk"],
+      "required": [
+        "acres",
+        "wooded",
+        "roadAccess",
+        "rvAccess",
+        "evacuationAccess",
+        "usableSpace",
+        "floodRisk"
+      ],
       "properties": {
-        "acres": { "type": ["number", "null"], "exclusiveMinimum": 0 },
-        "wooded": { "enum": ["heavily", "partially", "cleared", "unknown"] },
-        "roadAccess": { "enum": ["legal-paved", "legal-unpaved", "uncertain", "landlocked", "unknown"] },
-        "rvAccess": { "enum": ["verified-year-round", "likely", "difficult", "impossible", "unknown"] },
-        "evacuationAccess": { "enum": ["verified", "likely", "blocked", "unknown"] },
-        "usableSpace": { "enum": ["excellent", "adequate", "limited", "poor", "unknown"] },
-        "floodRisk": { "enum": ["low", "mixed", "high", "unknown"] },
-        "wetlands": { "enum": ["none-known", "partial", "substantial", "unknown"] }
+        "acres": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "wooded": {
+          "enum": [
+            "heavily",
+            "partially",
+            "cleared",
+            "unknown"
+          ]
+        },
+        "roadAccess": {
+          "enum": [
+            "legal-paved",
+            "legal-unpaved",
+            "uncertain",
+            "landlocked",
+            "unknown"
+          ]
+        },
+        "rvAccess": {
+          "enum": [
+            "verified-year-round",
+            "likely",
+            "difficult",
+            "impossible",
+            "unknown"
+          ]
+        },
+        "evacuationAccess": {
+          "enum": [
+            "verified",
+            "likely",
+            "blocked",
+            "unknown"
+          ]
+        },
+        "usableSpace": {
+          "enum": [
+            "excellent",
+            "adequate",
+            "limited",
+            "poor",
+            "unknown"
+          ]
+        },
+        "floodRisk": {
+          "enum": [
+            "low",
+            "mixed",
+            "high",
+            "unknown"
+          ]
+        },
+        "wetlands": {
+          "enum": [
+            "none-known",
+            "partial",
+            "substantial",
+            "unknown"
+          ]
+        }
       }
     },
     "dwelling": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["exists", "type", "condition"],
+      "required": [
+        "exists",
+        "type",
+        "condition"
+      ],
       "properties": {
-        "exists": { "type": "boolean" },
-        "type": { "enum": ["house", "mobile-home", "cabin", "condemned-structure", "other", "none", "unknown"] },
-        "condition": { "enum": ["move-in", "livable", "repairable", "major-rehab", "condemned", "none", "unknown"] }
+        "exists": {
+          "type": "boolean"
+        },
+        "type": {
+          "enum": [
+            "house",
+            "mobile-home",
+            "cabin",
+            "condemned-structure",
+            "other",
+            "none",
+            "unknown"
+          ]
+        },
+        "condition": {
+          "enum": [
+            "move-in",
+            "livable",
+            "repairable",
+            "major-rehab",
+            "condemned",
+            "none",
+            "unknown"
+          ]
+        }
       }
     },
     "utilities": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["overall", "power", "water", "septic"],
+      "required": [
+        "overall",
+        "power",
+        "water",
+        "septic"
+      ],
       "properties": {
-        "overall": { "enum": ["existing", "partial", "none", "unknown"] },
-        "power": { "enum": ["connected", "available", "solar-only", "none", "unknown"] },
-        "water": { "enum": ["public", "well", "available", "none", "unknown"] },
-        "septic": { "enum": ["installed", "sewer", "permitted", "none", "unknown"] }
+        "overall": {
+          "enum": [
+            "existing",
+            "partial",
+            "none",
+            "unknown"
+          ]
+        },
+        "power": {
+          "enum": [
+            "connected",
+            "available",
+            "solar-only",
+            "none",
+            "unknown"
+          ]
+        },
+        "water": {
+          "enum": [
+            "public",
+            "well",
+            "available",
+            "none",
+            "unknown"
+          ]
+        },
+        "septic": {
+          "enum": [
+            "installed",
+            "sewer",
+            "permitted",
+            "none",
+            "unknown"
+          ]
+        }
       }
     },
     "restrictions": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["hoa", "deedRestrictions", "outdoorStorage", "zoning"],
+      "required": [
+        "hoa",
+        "deedRestrictions",
+        "outdoorStorage",
+        "zoning"
+      ],
       "properties": {
-        "hoa": { "enum": ["none", "present", "unknown"] },
-        "deedRestrictions": { "enum": ["none-known", "present", "unknown"] },
-        "outdoorStorage": { "enum": ["unrestricted", "limited", "prohibited", "unknown"] },
-        "zoning": { "type": "string", "minLength": 1 }
+        "hoa": {
+          "enum": [
+            "none",
+            "present",
+            "unknown"
+          ]
+        },
+        "deedRestrictions": {
+          "enum": [
+            "none-known",
+            "present",
+            "unknown"
+          ]
+        },
+        "outdoorStorage": {
+          "enum": [
+            "unrestricted",
+            "limited",
+            "prohibited",
+            "unknown"
+          ]
+        },
+        "zoning": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "affordability": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["fit", "estimatedMonthlyHousingCost", "calculationStatus"],
+      "required": [
+        "fit",
+        "estimatedMonthlyHousingCost",
+        "calculationStatus"
+      ],
       "properties": {
-        "fit": { "enum": ["comfortable", "tight", "unaffordable", "unknown"] },
-        "estimatedMonthlyHousingCost": { "type": ["number", "null"], "minimum": 0 },
-        "calculationStatus": { "enum": ["estimated", "verified", "not-calculated"] },
-        "notes": { "type": "string" }
+        "fit": {
+          "enum": [
+            "comfortable",
+            "tight",
+            "unaffordable",
+            "unknown"
+          ]
+        },
+        "estimatedMonthlyHousingCost": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "calculationStatus": {
+          "enum": [
+            "estimated",
+            "verified",
+            "not-calculated"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
       }
     },
     "legalUse": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["residentialPath", "fullTimeRvOccupancy"],
+      "required": [
+        "residentialPath",
+        "fullTimeRvOccupancy"
+      ],
       "properties": {
-        "residentialPath": { "enum": ["existing-dwelling", "rv-allowed", "permit-path", "none", "unknown"] },
-        "fullTimeRvOccupancy": { "enum": ["allowed", "conditional", "prohibited", "unknown"] }
+        "residentialPath": {
+          "enum": [
+            "existing-dwelling",
+            "rv-allowed",
+            "permit-path",
+            "none",
+            "unknown"
+          ]
+        },
+        "fullTimeRvOccupancy": {
+          "enum": [
+            "allowed",
+            "conditional",
+            "prohibited",
+            "unknown"
+          ]
+        }
       }
     },
     "lifestyle": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["visibleNeighbors", "driveway", "gatePotential", "workshopPotential", "solarPotential", "waterAccessMiles", "internet"],
+      "required": [
+        "visibleNeighbors",
+        "driveway",
+        "gatePotential",
+        "workshopPotential",
+        "solarPotential",
+        "waterAccessMiles",
+        "internet"
+      ],
       "properties": {
-        "visibleNeighbors": { "enum": ["none", "few", "several", "many", "unknown"] },
-        "driveway": { "enum": ["long", "moderate", "short", "none", "unknown"] },
-        "gatePotential": { "enum": ["excellent", "possible", "poor", "unknown"] },
-        "workshopPotential": { "enum": ["existing", "excellent", "possible", "poor", "unknown"] },
-        "solarPotential": { "enum": ["excellent", "good", "limited", "poor", "unknown"] },
-        "waterAccessMiles": { "type": ["number", "null"], "minimum": 0 },
-        "internet": { "enum": ["fiber", "cable", "5g", "starlink", "dsl", "none", "unknown"] }
+        "visibleNeighbors": {
+          "enum": [
+            "none",
+            "few",
+            "several",
+            "many",
+            "unknown"
+          ]
+        },
+        "driveway": {
+          "enum": [
+            "long",
+            "moderate",
+            "short",
+            "none",
+            "unknown"
+          ]
+        },
+        "gatePotential": {
+          "enum": [
+            "excellent",
+            "possible",
+            "poor",
+            "unknown"
+          ]
+        },
+        "workshopPotential": {
+          "enum": [
+            "existing",
+            "excellent",
+            "possible",
+            "poor",
+            "unknown"
+          ]
+        },
+        "solarPotential": {
+          "enum": [
+            "excellent",
+            "good",
+            "limited",
+            "poor",
+            "unknown"
+          ]
+        },
+        "waterAccessMiles": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "internet": {
+          "enum": [
+            "fiber",
+            "cable",
+            "5g",
+            "starlink",
+            "dsl",
+            "none",
+            "unknown"
+          ]
+        }
       }
     },
     "acquisition": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["overlapSolution", "upfrontCashRequired", "ownerFinancing", "monthlyPayment", "balloonYears", "prepaymentPenalty", "closingFlexibility"],
+      "required": [
+        "overlapSolution",
+        "upfrontCashRequired",
+        "ownerFinancing",
+        "monthlyPayment",
+        "balloonYears",
+        "prepaymentPenalty",
+        "closingFlexibility"
+      ],
       "properties": {
-        "overlapSolution": { "enum": ["verified", "possible", "none", "unknown"] },
-        "upfrontCashRequired": { "type": ["number", "null"], "minimum": 0 },
-        "ownerFinancing": { "enum": ["available", "negotiable", "unavailable", "unknown"] },
-        "monthlyPayment": { "type": ["number", "null"], "minimum": 0 },
-        "balloonYears": { "type": ["number", "null"], "minimum": 0 },
-        "prepaymentPenalty": { "enum": ["none", "present", "unknown"] },
-        "closingFlexibility": { "enum": ["high", "some", "none", "unknown"] }
+        "overlapSolution": {
+          "enum": [
+            "verified",
+            "possible",
+            "none",
+            "unknown"
+          ]
+        },
+        "upfrontCashRequired": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ownerFinancing": {
+          "enum": [
+            "available",
+            "negotiable",
+            "unavailable",
+            "unknown"
+          ]
+        },
+        "monthlyPayment": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "balloonYears": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "prepaymentPenalty": {
+          "enum": [
+            "none",
+            "present",
+            "unknown"
+          ]
+        },
+        "closingFlexibility": {
+          "enum": [
+            "high",
+            "some",
+            "none",
+            "unknown"
+          ]
+        }
       }
     },
     "qualification": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "missedRequirements", "exceptionReason", "exceptionalStrengths", "rejectionReasons"],
+      "required": [
+        "status",
+        "missedRequirements",
+        "exceptionReason",
+        "exceptionalStrengths",
+        "rejectionReasons"
+      ],
       "properties": {
-        "status": { "enum": ["match", "exception", "rejected"] },
+        "status": {
+          "enum": [
+            "match",
+            "exception",
+            "rejected"
+          ]
+        },
         "missedRequirements": {
           "type": "array",
           "uniqueItems": true,
-          "items": { "enum": ["minimum-acreage", "existing-utilities-or-dwelling", "no-hoa", "rural-setting", "affordability"] }
+          "items": {
+            "enum": [
+              "minimum-acreage",
+              "existing-utilities-or-dwelling",
+              "no-hoa",
+              "rural-setting",
+              "affordability"
+            ]
+          }
         },
-        "exceptionReason": { "type": ["string", "null"] },
+        "exceptionReason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "exceptionalStrengths": {
           "type": "array",
           "uniqueItems": true,
-          "items": { "type": "string", "minLength": 1 }
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         },
         "rejectionReasons": {
           "type": "array",
           "uniqueItems": true,
-          "items": { "type": "string", "minLength": 1 }
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     },
     "research": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["stage", "confidence", "titleStatus", "confirmed", "unknowns", "notes"],
+      "required": [
+        "stage",
+        "confidence",
+        "titleStatus",
+        "confirmed",
+        "unknowns",
+        "notes"
+      ],
       "properties": {
-        "stage": { "enum": ["discovered", "screened", "researching", "verified", "visited"] },
-        "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
-        "titleStatus": { "enum": ["clear", "concerns", "serious-problem", "unknown"] },
-        "confirmed": { "type": "array", "items": { "type": "string", "minLength": 1 } },
-        "unknowns": { "type": "array", "items": { "type": "string", "minLength": 1 } },
-        "notes": { "type": "string" }
+        "stage": {
+          "enum": [
+            "discovered",
+            "screened",
+            "researching",
+            "verified",
+            "visited"
+          ]
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "titleStatus": {
+          "enum": [
+            "clear",
+            "concerns",
+            "serious-problem",
+            "unknown"
+          ]
+        },
+        "confirmed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unknowns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string"
+        },
+        "evidenceSources": {
+          "type": "object",
+          "description": "Provenance of each fit criterion: unknowns earn no evidence credit; avoid treating listing claims as independently verified.",
+          "additionalProperties": false,
+          "properties": {
+            "location": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "acreage": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "hoa": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "zoning": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "residential": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "well": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "septic": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "solar": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "privacy": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "rv": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "flood": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            },
+            "electric": {
+              "enum": [
+                "county-record",
+                "observed",
+                "listing",
+                "assessment"
+              ]
+            }
+          }
+        }
       }
     },
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["listing", "map"],
+      "required": [
+        "listing",
+        "map"
+      ],
       "properties": {
-        "listing": { "type": ["string", "null"], "format": "uri" },
-        "map": { "type": ["string", "null"], "format": "uri" },
-        "countyGis": { "type": ["string", "null"], "format": "uri" }
+        "listing": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "map": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "countyGis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
       }
     }
   },
@@ -185,8 +804,14 @@
       "if": {
         "properties": {
           "restrictions": {
-            "properties": { "hoa": { "const": "present" } },
-            "required": ["hoa"]
+            "properties": {
+              "hoa": {
+                "const": "present"
+              }
+            },
+            "required": [
+              "hoa"
+            ]
           }
         }
       },
@@ -194,9 +819,17 @@
         "properties": {
           "qualification": {
             "properties": {
-              "status": { "const": "rejected" },
-              "missedRequirements": { "contains": { "const": "no-hoa" } },
-              "rejectionReasons": { "minItems": 1 }
+              "status": {
+                "const": "rejected"
+              },
+              "missedRequirements": {
+                "contains": {
+                  "const": "no-hoa"
+                }
+              },
+              "rejectionReasons": {
+                "minItems": 1
+              }
             }
           }
         }
@@ -206,32 +839,101 @@
       "if": {
         "properties": {
           "qualification": {
-            "properties": { "status": { "const": "match" } },
-            "required": ["status"]
+            "properties": {
+              "status": {
+                "const": "match"
+              }
+            },
+            "required": [
+              "status"
+            ]
           }
         }
       },
       "then": {
         "properties": {
-          "utilities": { "properties": { "overall": { "const": "existing" } } },
-          "restrictions": { "properties": { "hoa": { "const": "none" } } },
-          "affordability": { "properties": { "fit": { "const": "comfortable" } } },
-          "location": { "properties": { "setting": { "enum": ["rural", "semi-rural"] } } },
-          "land": {
+          "utilities": {
             "properties": {
-              "acres": { "type": "number", "minimum": 2 },
-              "usableSpace": { "enum": ["excellent", "adequate"] },
-              "floodRisk": { "const": "low" }
+              "overall": {
+                "const": "existing"
+              }
             }
           },
-          "legalUse": { "properties": { "fullTimeRvOccupancy": { "enum": ["allowed", "conditional"] } } },
-          "lifestyle": { "properties": { "visibleNeighbors": { "enum": ["none", "few"] } } },
+          "restrictions": {
+            "properties": {
+              "hoa": {
+                "const": "none"
+              }
+            }
+          },
+          "affordability": {
+            "properties": {
+              "fit": {
+                "const": "comfortable"
+              }
+            }
+          },
+          "location": {
+            "properties": {
+              "setting": {
+                "enum": [
+                  "rural",
+                  "semi-rural"
+                ]
+              }
+            }
+          },
+          "land": {
+            "properties": {
+              "acres": {
+                "type": "number",
+                "minimum": 2
+              },
+              "usableSpace": {
+                "enum": [
+                  "excellent",
+                  "adequate"
+                ]
+              },
+              "floodRisk": {
+                "const": "low"
+              }
+            }
+          },
+          "legalUse": {
+            "properties": {
+              "fullTimeRvOccupancy": {
+                "enum": [
+                  "allowed",
+                  "conditional"
+                ]
+              }
+            }
+          },
+          "lifestyle": {
+            "properties": {
+              "visibleNeighbors": {
+                "enum": [
+                  "none",
+                  "few"
+                ]
+              }
+            }
+          },
           "qualification": {
             "properties": {
-              "missedRequirements": { "maxItems": 0 },
-              "exceptionReason": { "type": "null" },
-              "exceptionalStrengths": { "maxItems": 0 },
-              "rejectionReasons": { "maxItems": 0 }
+              "missedRequirements": {
+                "maxItems": 0
+              },
+              "exceptionReason": {
+                "type": "null"
+              },
+              "exceptionalStrengths": {
+                "maxItems": 0
+              },
+              "rejectionReasons": {
+                "maxItems": 0
+              }
             }
           }
         }
@@ -241,8 +943,14 @@
       "if": {
         "properties": {
           "dwelling": {
-            "properties": { "condition": { "const": "condemned" } },
-            "required": ["condition"]
+            "properties": {
+              "condition": {
+                "const": "condemned"
+              }
+            },
+            "required": [
+              "condition"
+            ]
           }
         }
       },
@@ -250,8 +958,12 @@
         "properties": {
           "qualification": {
             "properties": {
-              "status": { "const": "rejected" },
-              "rejectionReasons": { "minItems": 1 }
+              "status": {
+                "const": "rejected"
+              },
+              "rejectionReasons": {
+                "minItems": 1
+              }
             }
           }
         }
@@ -261,20 +973,44 @@
       "if": {
         "properties": {
           "qualification": {
-            "properties": { "status": { "const": "exception" } },
-            "required": ["status"]
+            "properties": {
+              "status": {
+                "const": "exception"
+              }
+            },
+            "required": [
+              "status"
+            ]
           }
         }
       },
       "then": {
         "properties": {
-          "restrictions": { "properties": { "hoa": { "enum": ["none", "unknown"] } } },
+          "restrictions": {
+            "properties": {
+              "hoa": {
+                "enum": [
+                  "none",
+                  "unknown"
+                ]
+              }
+            }
+          },
           "qualification": {
             "properties": {
-              "missedRequirements": { "minItems": 1 },
-              "exceptionReason": { "type": "string", "minLength": 1 },
-              "exceptionalStrengths": { "minItems": 1 },
-              "rejectionReasons": { "maxItems": 0 }
+              "missedRequirements": {
+                "minItems": 1
+              },
+              "exceptionReason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "exceptionalStrengths": {
+                "minItems": 1
+              },
+              "rejectionReasons": {
+                "maxItems": 0
+              }
             }
           }
         }
@@ -284,15 +1020,25 @@
       "if": {
         "properties": {
           "qualification": {
-            "properties": { "status": { "const": "rejected" } },
-            "required": ["status"]
+            "properties": {
+              "status": {
+                "const": "rejected"
+              }
+            },
+            "required": [
+              "status"
+            ]
           }
         }
       },
       "then": {
         "properties": {
           "qualification": {
-            "properties": { "rejectionReasons": { "minItems": 1 } }
+            "properties": {
+              "rejectionReasons": {
+                "minItems": 1
+              }
+            }
           }
         }
       }
