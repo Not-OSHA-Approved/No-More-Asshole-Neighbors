@@ -40,7 +40,7 @@ export function propertyViewModel(property) {
     price: formatMoney(property.listing.price),
     acres: property.land.acres === null ? "Unknown" : `${property.land.acres} acres`,
     status: property.qualification.status,
-    statusLabel: STATUS_LABELS[property.qualification.status],
+    statusLabel: property.id === "NMAN-013" ? "Priority #1" : STATUS_LABELS[property.qualification.status],
     retirementScore: scores.retirement.total,
     acquisitionScore: scores.acquisition.total,
     fitAssessment: property.id === "NMAN-013" ? "Top choice" : "Needs review",
