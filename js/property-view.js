@@ -29,8 +29,42 @@ export function formatMoney(value) {
     }).format(value);
 }
 
+
+function evaluateChecks(property) {
+  const isKnown = v => v !== null && v !== undefined && v !== "unknown";
+  const checks = [
+    ["Brooksville location", isKnown(property.location.city), property.location.city.toLowerCase() === "brooksville"],
+    ["At least 2 acres", typeof property.land.acres === "number", property.land.acres >= 2],
+    ["No HOA", isKnown(property.restrictions.hoa), property.restrictions.hoa === "none"],
+    ["Agricultural/rural zoning", isKnown(property.restrictions.zoning), ["AG", "AR2"].includes(property.restrictions.zoning)],
+    ["Existing residential structure", isKnown(property.legalUse.residentialPath), property.legalUse.residentialPath === "existing-dwelling"],
+    ["Well on property", isKnown(property.utilities.water), property.utilities.water === "well"],
+    ["Septic installed", isKnown(property.utilities.septic), property.utilities.septic === "installed"],
+    ["Solar potential rated good or better", isKnown(property.lifestyle.solarPotential), ["good", "excellent"].includes(property.lifestyle.solarPotential)],
+    ["Privacy from neighbors verified", isKnown(property.lifestyle.visibleNeighbors), ["none", "few"].includes(property.lifestyle.visibleNeighbors)],
+    ["Full-time RV occupancy authorized", isKnown(property.legalUse.fullTimeRvOccupancy), property.legalUse.fullTimeRvOccupancy === "allowed"],
+    ["Flood risk verified low", isKnown(property.land.floodRisk), property.land.floodRisk === "low"],
+    ["Electricity connected", isKnown(property.utilities.power), property.utilities.power === "connected"]
+  ];
+  const fit = { met: checks.filter(c => c[1] && c[2]).length, total: checks.length, open: checks.filter(c => !c[1]).length, unmet: checks.filter(c => c[1] && !c[2]).length };
+  const acquisition = property.acquisition;
+  const financing = [
+    ["Down payment confirmed", acquisition.upfrontCashRequired !== null],
+    ["Interest and repayment term confirmed", acquisition.interestRate != null && acquisition.amortizationYears != null],
+    ["Mortgage payment ≤ $1,000 confirmed", acquisition.monthlyPayment !== null && acquisition.monthlyPayment <= 1000],
+    ["Prepayment terms confirmed", acquisition.prepaymentPenalty !== "unknown"],
+    ["Buy-before-sell arrangement confirmed", acquisition.overlapSolution === "verified"]
+  ];
+  return {
+    fit, financing: { met: financing.filter(x => x[1]).length, total: financing.length },
+    fitChecks: checks.map(([label, known, pass]) => ({ label, status: !known ? "Open" : pass ? "Met" : "Not met" })),
+    financingChecks: financing.map(([label, met]) => ({ label, status: met ? "Verified" : "Open" }))
+  };
+}
+
 export function propertyViewModel(property) {
   const scores = scoreProperty(property);
+  const checks = evaluateChecks(property);
 
   return {
     id: property.id,
@@ -43,6 +77,7 @@ export function propertyViewModel(property) {
     statusLabel: property.id === "NMAN-013" ? "Priority #1" : STATUS_LABELS[property.qualification.status],
     retirementScore: scores.retirement.total,
     acquisitionScore: scores.acquisition.total,
+    checks,
     fitAssessment: property.id === "NMAN-013" ? "Top choice" : "Needs review",
     acquisitionAssessment: property.acquisition.ownerFinancing === "available" || property.acquisition.ownerFinancing === "negotiable"
       ? "Terms unverified" : "Financing unverified",
@@ -72,8 +107,8 @@ export function renderQueueItem(property, selected = false) {
       <small>${escapeHtml(view.place)}</small>
       <span class="candidate-facts">${escapeHtml(view.price)} · ${escapeHtml(view.acres)}</span>
       <span class="mini-scores">
-        <span>Fit: <b>${escapeHtml(view.fitAssessment)}</b></span>
-        <span>Purchase: <b>${escapeHtml(view.acquisitionAssessment)}</b></span>
+        <span>Fit: <b>${view.checks.fit.met}/${view.checks.fit.total} matched</b></span>
+        <span>Financing: <b>${view.checks.financing.met}/${view.checks.financing.total} verified</b></span>
       </span>
     </button>`;
 }
@@ -99,10 +134,11 @@ export function renderPropertyDetail(property) {
       <strong class="detail-price">${escapeHtml(view.price)}</strong>
     </div>
     <div class="score-pair" aria-label="Property assessment and financing status">
-      <article><span>Retirement Fit</span><strong>${escapeHtml(view.fitAssessment)}</strong><small>Based on current preferences; unresolved checks below</small></article>
-      <article><span>Acquisition Feasibility</span><strong>${escapeHtml(view.acquisitionAssessment)}</strong><small>Down payment, payment terms and closing path not yet confirmed</small></article>
+      <article><span>Retirement Fit Checks</span><strong>${view.checks.fit.met}<small> / ${view.checks.fit.total} met</small></strong><small>${view.checks.fit.open} open · ${view.checks.fit.unmet} not met. Counts include advertised features and assessments, not independent verification.</small></article>
+      <article><span>Financing Terms Verified</span><strong>${view.checks.financing.met}<small> / ${view.checks.financing.total}</small></strong><small>A seller-financing advertisement is not a confirmed financing agreement.</small></article>
     </div>
     <p class="decision-summary">${escapeHtml(view.exceptionReason ?? view.notes)}</p>
+    <details class="assessment-checks"><summary>How these numbers are calculated</summary><div class="assessment-lists"><div><h3>Retirement fit</h3><ul>${view.checks.fitChecks.map(c => `<li>${escapeHtml(c.label)} — ${escapeHtml(c.status)}</li>`).join("")}</ul></div><div><h3>Financing</h3><ul>${view.checks.financingChecks.map(c => `<li>${escapeHtml(c.label)} — ${escapeHtml(c.status)}</li>`).join("")}</ul></div></div></details>
     <div class="fact-strip">
       <span><small>Land</small>${escapeHtml(view.acres)}</span>
       <span><small>Dwelling</small>${escapeHtml(view.dwellingCondition)}</span>
@@ -127,7 +163,7 @@ export function renderAcquisitionPanel(property) {
 
   return `
     <p class="eyebrow">Reality check</p>
-    <h2>${escapeHtml(view.acquisitionAssessment)}</h2>
+    <h2>${view.checks.financing.met}/${view.checks.financing.total} financing terms verified</h2>
     <p>${escapeHtml(view.notes)}</p>
     <dl class="reality-list">
       <div><dt>Research confidence</dt><dd>${view.confidence}%</dd></div>
